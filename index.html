@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peter the Great | Personal Observatory</title>
+  <meta
+    id="meta-description"
+    name="description"
+    content="彼得大帝的个人主页，记录足迹、家人记忆、绿色能源观察与财富研究。"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css?v=weekly-intelligence">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top">PETER OBSERVATORY</a>
+      <div class="header-controls">
+        <nav class="site-nav" aria-label="主导航">
+          <a href="#about" data-nav="about">关于</a>
+          <a href="#weekly-intelligence" data-nav="focus">关注方向</a>
+          <a href="#panorama" data-nav="panorama">全景</a>
+          <a href="#memories" data-nav="memories">记忆</a>
+          <a href="#intelligence" data-nav="intelligence">情报</a>
+          <a href="#access" data-nav="access">权限</a>
+          <a href="#contact" data-nav="contact">联系</a>
+        </nav>
+        <button class="language-toggle" id="language-toggle" type="button" aria-label="切换语言">
+          EN
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" id="hero-eyebrow">个人观察站</p>
+          <h1 id="hero-name">彼得大帝</h1>
+          <p class="hero-tagline" id="hero-tagline"></p>
+          <p class="hero-description" id="hero-description"></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#memories" id="primary-cta">查看记忆</a>
+            <a class="button button-secondary" href="#intelligence" id="secondary-cta">查看情报</a>
+          </div>
+          <div class="signal-row" id="signal-row"></div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-image-card" data-depth="0.08">
+            <img
+              id="hero-background"
+              src="assets/cape-breton-highlands-hero.png"
+              alt="一侧是高地山体、一侧是海岸线的海岬高地风景照片"
+            >
+            <div class="hero-overlay">
+              <div class="overlay-block">
+                <p class="overlay-label">当前状态</p>
+                <p class="overlay-value" id="hero-status"></p>
+              </div>
+              <div class="overlay-block overlay-block-location">
+                <p class="overlay-label" id="hero-location-label">照片地点</p>
+                <p class="overlay-value" id="hero-location"></p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-avatar-card">
+            <div class="avatar-frame">
+              <img id="avatar-image" src="assets/avatar-kamon.jpg" alt="彼得大帝身份标签图像">
+            </div>
+            <div class="mini-bio">
+              <p class="mini-bio-label">身份标签</p>
+              <p class="mini-bio-value" id="mini-bio-value"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section reveal" id="about">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">ABOUT</p>
+            <h2 id="about-title">这是谁的全景</h2>
+          </div>
+          <p class="section-side-note" id="about-side-note"></p>
+        </div>
+        <div class="about-grid">
+          <div class="about-story">
+            <p class="about-text" id="about-text"></p>
+            <div class="quote-panel">
+              <p class="quote-mark">“</p>
+              <p class="quote-text" id="signature-quote"></p>
+            </div>
+          </div>
+          <div class="about-facts" id="about-facts"></div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="panorama">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">PANORAMA</p>
+            <h2 id="panorama-title">个人关注全景</h2>
+          </div>
+          <p class="section-side-note" id="panorama-note"></p>
+        </div>
+        <div class="panorama-grid" id="panorama-grid"></div>
+      </section>
+
+      <section class="section focus-section reveal" id="weekly-intelligence">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker" id="focus-kicker">FOCUS AREAS</p>
+            <h2 id="focus-title">关注方向</h2>
+          </div>
+          <p class="section-side-note" id="focus-updated">正在载入本周更新</p>
+        </div>
+        <div class="focus-intro" id="focus-intro"></div>
+        <div class="focus-directory" id="focus-directory"></div>
+        <div class="focus-weekly" id="focus-weekly"></div>
+      </section>
+
+      <section class="section reveal" id="memories">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">MEMORIES</p>
+            <h2 id="memories-title">足迹与家人记忆</h2>
+          </div>
+          <p class="section-side-note" id="memories-note"></p>
+        </div>
+        <div class="memory-split">
+          <article class="memory-column public-memory">
+            <div class="memory-header">
+              <p class="memory-label" id="public-memory-label">公开区</p>
+              <h3 id="public-memory-title">可公开分享的足迹与风景</h3>
+            </div>
+            <p class="memory-copy" id="public-memory-copy"></p>
+            <div class="memory-gallery" id="public-gallery"></div>
+          </article>
+          <article class="memory-column private-memory">
+            <div class="memory-header">
+              <p class="memory-label" id="private-memory-label">授权区</p>
+              <h3 id="private-memory-title">只向家人或授权者开放</h3>
+            </div>
+            <p class="memory-copy" id="private-memory-copy"></p>
+            <div class="vault-list" id="private-vault"></div>
+            <a class="button button-secondary memory-entry-button" href="family.html" id="family-entry-button">
+              进入家人授权版
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="intelligence">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">INTELLIGENCE</p>
+            <h2 id="intelligence-title">绿色能源与投资情报台</h2>
+          </div>
+          <p class="section-side-note" id="intelligence-note"></p>
+        </div>
+        <div class="intel-grid" id="intel-grid"></div>
+      </section>
+
+      <section class="section reveal" id="access">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">ACCESS</p>
+            <h2 id="access-title">公开与授权的边界</h2>
+          </div>
+        </div>
+        <div class="access-grid" id="access-grid"></div>
+      </section>
+
+      <section class="section contact-section reveal" id="contact">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">CONTACT</p>
+            <h2 id="contact-title">如果要连接这个全景</h2>
+          </div>
+        </div>
+        <p class="contact-copy" id="contact-copy"></p>
+        <p class="contact-note" id="contact-note"></p>
+        <div class="contact-links" id="contact-links"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="关闭大图">×</button>
+    <img class="lightbox-image" id="lightbox-image" alt="">
+  </div>
+
+  <script src="script.js?v=weekly-intelligence"></script>
+</body>
+</html>

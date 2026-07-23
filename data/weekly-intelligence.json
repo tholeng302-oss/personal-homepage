@@ -1,0 +1,213 @@
+{
+  "updatedAt": "2026-07-24T09:00:00+08:00",
+  "topics": [
+    {
+      "id": "ai",
+      "name": "人工智能",
+      "nameEn": "Artificial intelligence",
+      "sources": [
+        { "name": "Stanford AI Index", "url": "https://hai.stanford.edu/ai-index" },
+        { "name": "OECD.AI", "url": "https://oecd.ai/en/" }
+      ],
+      "feeds": ["https://news.google.com/rss/search?q=artificial+intelligence+research+policy&hl=en-US&gl=US&ceid=US:en"],
+      "items": [
+        {
+          "title": "Stanford 发布 2026 AI Index",
+          "titleEn": "Stanford publishes the 2026 AI Index",
+          "summary": "年度报告覆盖模型能力、投资、采用、治理与社会影响，为跨区域比较提供独立数据框架。",
+          "summaryEn": "The annual report tracks model capability, investment, adoption, governance and societal impact with independently compiled data.",
+          "source": "Stanford HAI",
+          "url": "https://hai.stanford.edu/ai-index",
+          "publishedAt": "2026-06-01",
+          "kind": "研究"
+        },
+        {
+          "title": "OECD.AI 汇集全球 AI 政策与治理资料",
+          "titleEn": "OECD.AI tracks global AI policy and governance",
+          "summary": "可用于跟踪各国的 AI 战略、法规、创新生态与可信 AI 政策进展。",
+          "summaryEn": "The policy observatory tracks national strategies, regulation, innovation ecosystems and trustworthy-AI work.",
+          "source": "OECD.AI",
+          "url": "https://oecd.ai/en/",
+          "publishedAt": "2026-07-01",
+          "kind": "政策"
+        }
+      ]
+    },
+    {
+      "id": "hydrogen",
+      "name": "绿色氢能",
+      "nameEn": "Clean hydrogen",
+      "sources": [
+        { "name": "IEA Hydrogen Tracker", "url": "https://www.iea.org/data-and-statistics/data-tools/hydrogen-tracker" },
+        { "name": "IEA Global Hydrogen Review", "url": "https://www.iea.org/reports/global-hydrogen-review-2026" }
+      ],
+      "feeds": ["https://news.google.com/rss/search?q=clean+hydrogen+project&hl=en-US&gl=US&ceid=US:en"],
+      "items": [
+        {
+          "title": "IEA 氢能追踪器更新项目、基础设施与承购数据",
+          "titleEn": "IEA tracker updates projects, infrastructure and offtake data",
+          "summary": "项目级数据涵盖低排放氢产能、管道、地下储氢与已签署承购协议。",
+          "summaryEn": "Project-level data covers low-emissions production, pipelines, storage and signed offtake agreements.",
+          "source": "IEA",
+          "url": "https://www.iea.org/data-and-statistics/data-tools/hydrogen-tracker",
+          "publishedAt": "2026-06-18",
+          "kind": "数据"
+        }
+      ]
+    },
+    {
+      "id": "ammonia",
+      "name": "绿氨",
+      "nameEn": "Green ammonia",
+      "sources": [
+        { "name": "IEA Hydrogen Tracker", "url": "https://www.iea.org/data-and-statistics/data-tools/hydrogen-tracker" },
+        { "name": "Ammonia Energy Association", "url": "https://ammoniaenergy.org/" }
+      ],
+      "feeds": ["https://news.google.com/rss/search?q=green+ammonia+project&hl=en-US&gl=US&ceid=US:en"],
+      "items": [
+        {
+          "title": "绿氨作为氢衍生品进入项目与政策追踪",
+          "titleEn": "Green ammonia enters project and policy tracking",
+          "summary": "关注可再生电力、制氢、合成氨、港口储运与终端承购之间的完整链条。",
+          "summaryEn": "Track the chain from renewable power and hydrogen through synthesis, port logistics and offtake.",
+          "source": "IEA",
+          "url": "https://www.iea.org/data-and-statistics/data-tools/hydrogen-tracker",
+          "publishedAt": "2026-06-18",
+          "kind": "数据"
+        }
+      ]
+    },
+    {
+      "id": "methanol",
+      "name": "绿色甲醇",
+      "nameEn": "E-methanol",
+      "sources": [
+        { "name": "Methanol Institute", "url": "https://www.methanol.org/" },
+        { "name": "IEA", "url": "https://www.iea.org/" }
+      ],
+      "feeds": ["https://news.google.com/rss/search?q=e-methanol+project&hl=en-US&gl=US&ceid=US:en"],
+      "items": [
+        {
+          "title": "绿色甲醇应跟踪碳源、氢源与船舶承购",
+          "titleEn": "E-methanol tracking needs carbon, hydrogen and marine-offtake data",
+          "summary": "项目判断不只看名义产能，还应核对二氧化碳来源、绿氢成本、认证与长期承购。",
+          "summaryEn": "Project assessment should verify CO₂ source, green-hydrogen cost, certification and long-term offtake.",
+          "source": "Methanol Institute",
+          "url": "https://www.methanol.org/",
+          "publishedAt": "2026-07-01",
+          "kind": "行业"
+        }
+      ]
+    },
+    {
+      "id": "saf",
+      "name": "可持续航空燃料",
+      "nameEn": "Sustainable aviation fuel",
+      "sources": [
+        { "name": "IATA SAF", "url": "https://www.iata.org/en/programs/sustainability/sustainable-aviation-fuel/" },
+        { "name": "ICAO Environmental Protection", "url": "https://www.icao.int/environmental-protection/Pages/default.aspx" }
+      ],
+      "feeds": ["https://news.google.com/rss/search?q=sustainable+aviation+fuel+SAF&hl=en-US&gl=US&ceid=US:en"],
+      "items": [
+        {
+          "title": "SAF 更新应同时关注原料路线与航空需求",
+          "titleEn": "SAF updates should connect pathways with aviation demand",
+          "summary": "持续跟踪 HEFA、酒精制航煤、气化和电合成路线，以及航空公司承购与政策激励。",
+          "summaryEn": "Track HEFA, alcohol-to-jet, gasification and e-fuel pathways alongside airline offtake and policy support.",
+          "source": "IATA",
+          "url": "https://www.iata.org/en/programs/sustainability/sustainable-aviation-fuel/",
+          "publishedAt": "2026-07-01",
+          "kind": "行业"
+        }
+      ]
+    },
+    {
+      "id": "biogas",
+      "name": "沼气与生物甲烷",
+      "nameEn": "Biogas and biomethane",
+      "sources": [
+        { "name": "IEA Biogas Outlook", "url": "https://www.iea.org/reports/outlook-for-biogas-and-biomethane" },
+        { "name": "European Biogas Association", "url": "https://www.europeanbiogas.eu/" }
+      ],
+      "feeds": ["https://news.google.com/rss/search?q=biogas+biomethane+project&hl=en-US&gl=US&ceid=US:en"],
+      "items": [
+        {
+          "title": "IEA 强调沼气与生物甲烷的能源和减排协同",
+          "titleEn": "IEA highlights the energy and emissions value of biogases",
+          "summary": "沼气可用于供热和发电；升级后的生物甲烷可替代天然气，并与废弃物和甲烷减排政策相连。",
+          "summaryEn": "Biogas supports heat and power; upgraded biomethane can substitute for gas and links waste management with methane reduction.",
+          "source": "IEA",
+          "url": "https://www.iea.org/reports/outlook-for-biogas-and-biomethane",
+          "publishedAt": "2025-01-01",
+          "kind": "研究"
+        }
+      ]
+    },
+    {
+      "id": "stocks",
+      "name": "全球主要股市",
+      "nameEn": "Major global equities",
+      "sources": [
+        { "name": "MSCI Index Resources", "url": "https://www.msci.com/indexes/index-resources" },
+        { "name": "S&P Dow Jones Indices", "url": "https://www.spglobal.com/spdji/en/" }
+      ],
+      "feeds": ["https://news.google.com/rss/search?q=MSCI+World+S%26P+500+markets&hl=en-US&gl=US&ceid=US:en"],
+      "items": [
+        {
+          "title": "以全球基准而非单一市场组织观察",
+          "titleEn": "Organize market observation around global benchmarks",
+          "summary": "用 MSCI ACWI/World、S&P 500、STOXX Europe 600、日经和中国主要指数建立多市场快照。",
+          "summaryEn": "Use MSCI ACWI/World, S&P 500, STOXX Europe 600, Nikkei and major China indices for a multi-market snapshot.",
+          "source": "MSCI",
+          "url": "https://www.msci.com/indexes/index-resources",
+          "publishedAt": "2026-07-01",
+          "kind": "市场"
+        }
+      ]
+    },
+    {
+      "id": "carbon",
+      "name": "碳排放交易",
+      "nameEn": "Carbon markets",
+      "sources": [
+        { "name": "World Bank Carbon Pricing Dashboard", "url": "https://carbonpricingdashboard.worldbank.org/" },
+        { "name": "ICAP ETS Map", "url": "https://icapcarbonaction.com/en/ets" }
+      ],
+      "feeds": ["https://news.google.com/rss/search?q=carbon+market+EU+ETS+emissions+trading&hl=en-US&gl=US&ceid=US:en"],
+      "items": [
+        {
+          "title": "世界银行仪表板汇总全球碳定价制度",
+          "titleEn": "World Bank dashboard maps global carbon pricing",
+          "summary": "该仪表板覆盖碳税、排放交易体系与抵消机制，可按司法辖区查看价格、覆盖范围和制度状态。",
+          "summaryEn": "The dashboard covers taxes, emissions trading and crediting, with jurisdiction-level price, coverage and status data.",
+          "source": "World Bank",
+          "url": "https://carbonpricingdashboard.worldbank.org/",
+          "publishedAt": "2026-05-01",
+          "kind": "数据"
+        }
+      ]
+    },
+    {
+      "id": "scenery",
+      "name": "风景与文化景观",
+      "nameEn": "Scenery and cultural landscapes",
+      "sources": [
+        { "name": "UNESCO World Heritage", "url": "https://whc.unesco.org/" },
+        { "name": "Google Arts & Culture", "url": "https://artsandculture.google.com/project/explore-world-heritage/nature" }
+      ],
+      "feeds": ["https://news.google.com/rss/search?q=UNESCO+World+Heritage+landscape&hl=en-US&gl=US&ceid=US:en"],
+      "items": [
+        {
+          "title": "以世界遗产与地方官方信息建立风景档案",
+          "titleEn": "Build scenery archives from World Heritage and official local sources",
+          "summary": "文化景观的记录同时连接自然地貌、历史文化、保护规则和可持续旅行信息。",
+          "summaryEn": "Cultural-landscape records connect natural features, history, protection rules and sustainable-travel context.",
+          "source": "UNESCO World Heritage Centre",
+          "url": "https://whc.unesco.org/en/culturallandscape/",
+          "publishedAt": "2026-07-01",
+          "kind": "文化"
+        }
+      ]
+    }
+  ]
+}

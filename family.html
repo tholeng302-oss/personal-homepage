@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>彼得大帝 | 家人授权版</title>
+  <meta
+    name="description"
+    content="彼得大帝的家人授权版入口，用于访问仅向家人或被授权者开放的相册、足迹与纪念内容。"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="family-page">
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">PETER THE GREAT</a>
+      <div class="header-controls">
+        <nav class="site-nav" aria-label="家人授权版导航">
+          <a href="#overview">入口说明</a>
+          <a href="#checkpoint">本地解锁</a>
+          <a href="#albums">内容范围</a>
+          <a href="#vault">内容面板</a>
+          <a href="#protocol">访问原则</a>
+        </nav>
+        <a class="button button-secondary" href="index.html">返回主站</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section family-hero reveal" id="overview">
+        <span class="family-badge">Family Access</span>
+        <div class="family-hero-copy">
+          <h1>家人授权版入口</h1>
+          <p class="hero-tagline">
+            这里是为家人和特定授权者预留的独立入口，用来访问不公开展示的照片、足迹和纪念内容。
+          </p>
+          <p class="hero-description">
+            这不再只是一个占位入口。现在它已经具备本地口令解锁、解锁后内容面板、相册分区与访问说明，
+            可以作为家人私密站的第一版原型继续扩展。
+          </p>
+          <div class="family-hero-actions">
+            <a class="button button-primary" href="#checkpoint">进入本地解锁</a>
+            <a class="button button-secondary" href="#vault">查看内容面板</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal family-checkpoint" id="checkpoint">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">CHECKPOINT</p>
+            <h2>本地解锁入口</h2>
+          </div>
+          <p class="section-side-note">用于本机预览与演示，不等同于真正的服务端权限控制。</p>
+        </div>
+        <div class="checkpoint-grid">
+          <article class="family-card checkpoint-card">
+            <h3>演示口令</h3>
+            <p>当前页面内置了一个本地预览口令，便于你立即测试交互流程。部署前请务必更换为真实鉴权方案。</p>
+            <div class="checkpoint-code">family-2026</div>
+            <p class="checkpoint-hint">提示：口令写在页面脚本里，只适合本机原型，不适合公开上线。</p>
+          </article>
+          <article class="family-card checkpoint-card">
+            <h3>解锁面板</h3>
+            <form class="unlock-form" id="unlock-form">
+              <label class="unlock-label" for="family-access-code">输入访问口令</label>
+              <input class="unlock-input" id="family-access-code" name="family-access-code" type="password" autocomplete="off" placeholder="请输入口令">
+              <div class="unlock-actions">
+                <button class="button button-primary" type="submit">解锁内容面板</button>
+                <button class="button button-secondary" id="lock-button" type="button">重新上锁</button>
+              </div>
+              <p class="unlock-status" id="unlock-status" aria-live="polite">当前状态：未解锁。</p>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="albums">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">ALBUMS</p>
+            <h2>这里将承载的内容</h2>
+          </div>
+          <p class="section-side-note">只面向家人或明确授权的浏览者。</p>
+        </div>
+        <div class="family-grid">
+          <article class="family-card">
+            <h3>家庭相册</h3>
+            <p>保存不适合公开发布的合照、生活记录、节庆影像、纪念性照片与家庭视频索引。</p>
+          </article>
+          <article class="family-card">
+            <h3>私密足迹</h3>
+            <p>记录具体旅程、重要地点、路线、停留时间与只希望在家庭内部流通的旅行回忆。</p>
+          </article>
+          <article class="family-card">
+            <h3>纪念档案</h3>
+            <p>集中整理某些特别的人、特别的时刻与特别年份，让这些记忆被长期妥善保存。</p>
+          </article>
+          <article class="family-card">
+            <h3>家人共享说明</h3>
+            <p>为每一类内容定义谁可以看、谁可以下载、谁可以继续补充上传，减少边界模糊。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal family-vault-shell" id="vault">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">VAULT</p>
+            <h2>解锁后的内容面板</h2>
+          </div>
+          <p class="section-side-note">解锁后可见，用于放私密相册、纪念档案、访问说明与下一步动作。</p>
+        </div>
+
+        <div class="vault-locked-state" id="vault-locked-state">
+          <div class="vault-locked-panel">
+            <p class="vault-locked-kicker">LOCKED</p>
+            <h3>内容面板尚未解锁</h3>
+            <p>先在上方输入口令。解锁后，本地会记住本次会话状态，刷新页面后仍可继续浏览，直到你手动重新上锁。</p>
+          </div>
+        </div>
+
+        <div class="vault-unlocked-state" id="vault-unlocked-state" hidden>
+          <div class="vault-dashboard">
+            <article class="family-card vault-spotlight">
+              <p class="memory-label">本次状态</p>
+              <h3>家人访问入口已开启</h3>
+              <p>现在可以把这里当作家人站的主控面板。后续只需要把真实相册目录、文件索引、视频列表或外部存储链接替换进去。</p>
+              <div class="vault-status-row">
+                <span class="tag">已解锁</span>
+                <span class="tag">本地会话</span>
+                <span class="tag">可继续扩展</span>
+              </div>
+            </article>
+            <article class="family-card vault-spotlight">
+              <p class="memory-label">建议下一步</p>
+              <h3>把占位内容换成真实家庭资料</h3>
+              <p>优先替换三个位置：家庭相册目录、纪念档案时间线、共享说明。这样这个页面就会从原型过渡成真正可用的私人入口。</p>
+            </article>
+          </div>
+
+          <div class="family-grid vault-content-grid">
+            <article class="family-card">
+              <h3>家庭相册目录</h3>
+              <p>建议放近期相册、年度相册、特别纪念日、长辈照片修复集、家庭旅行合集。</p>
+              <ul class="family-list">
+                <li>2026 夏季家庭相册</li>
+                <li>节庆与团聚记录</li>
+                <li>长辈单人肖像整理</li>
+              </ul>
+            </article>
+            <article class="family-card">
+              <h3>纪念档案时间线</h3>
+              <p>适合放人物回忆、重大年份、重要地点与照片说明，让内容不是“堆图”，而是有脉络的家庭叙事。</p>
+              <ul class="family-list">
+                <li>重要年份节点</li>
+                <li>地点与家族迁移线索</li>
+                <li>照片背后的故事说明</li>
+              </ul>
+            </article>
+            <article class="family-card">
+              <h3>共享与下载规则</h3>
+              <p>明确哪些内容只可浏览、哪些可以下载、哪些允许继续补充，减少家人之间“能不能发出去”的不确定性。</p>
+              <ul class="family-list">
+                <li>默认仅浏览</li>
+                <li>特定目录允许下载</li>
+                <li>新增资料统一归档命名</li>
+              </ul>
+            </article>
+            <article class="family-card">
+              <h3>私有链接入口</h3>
+              <p>这里未来可以接入你自己的本地 NAS、受保护云盘、私有图片目录或下载清单。</p>
+              <div class="family-link-stack">
+                <a class="button button-secondary" href="#protocol">查看访问原则</a>
+                <a class="button button-secondary" href="index.html">返回公开主站</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="protocol">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">PROTOCOL</p>
+            <h2>访问原则</h2>
+          </div>
+          <p class="section-side-note">入口分离只是第一步，真正的保护来自后端鉴权。</p>
+        </div>
+        <div class="family-protocol-grid">
+          <article class="family-card">
+            <h3>谁可以进入</h3>
+            <p>家人、亲属，以及被明确授权的人。公开访客不会在主站中直接看到受保护内容本身。</p>
+          </article>
+          <article class="family-card">
+            <h3>如何进一步加固</h3>
+            <p>下一步可以加入登录验证、访问口令、独立部署目录、私有对象存储与到期权限回收机制。</p>
+          </article>
+          <article class="family-card">
+            <h3>静态原型的边界</h3>
+            <p>当前这仍是前端入口页，已经完成“公开站 / 家人站”分离，但还没有真正的服务端权限控制。</p>
+          </article>
+          <article class="family-card">
+            <h3>后续扩展方向</h3>
+            <p>可以继续接入受保护相册、私人地图、家庭纪念册、共享留言区和访问日志模块。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section reveal">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">NEXT</p>
+            <h2>接下来可以怎么做</h2>
+          </div>
+        </div>
+        <p class="family-note">
+          如果你要把这个家人授权版做成真正可用的私密站，下一步最值得做的是接入密码或账号登录，再把照片与视频放到受保护的本地或云端存储里。
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const FAMILY_ACCESS_CODE = "family-2026";
+    const STORAGE_KEY = "peter-family-access-unlocked";
+
+    const form = document.getElementById("unlock-form");
+    const input = document.getElementById("family-access-code");
+    const statusNode = document.getElementById("unlock-status");
+    const lockButton = document.getElementById("lock-button");
+    const lockedState = document.getElementById("vault-locked-state");
+    const unlockedState = document.getElementById("vault-unlocked-state");
+
+    function setUnlocked(unlocked) {
+      sessionStorage.setItem(STORAGE_KEY, unlocked ? "true" : "false");
+
+      if (lockedState) {
+        lockedState.hidden = unlocked;
+      }
+
+      if (unlockedState) {
+        unlockedState.hidden = !unlocked;
+      }
+
+      if (statusNode) {
+        statusNode.textContent = unlocked ? "当前状态：已解锁，本次会话内可浏览内容面板。" : "当前状态：未解锁。";
+      }
+
+      if (!unlocked && input) {
+        input.value = "";
+      }
+    }
+
+    function restoreState() {
+      const unlocked = sessionStorage.getItem(STORAGE_KEY) === "true";
+      setUnlocked(unlocked);
+    }
+
+    if (form) {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const code = input ? input.value.trim() : "";
+
+        if (code === FAMILY_ACCESS_CODE) {
+          setUnlocked(true);
+          return;
+        }
+
+        if (statusNode) {
+          statusNode.textContent = "口令不正确，请重新输入。";
+        }
+      });
+    }
+
+    if (lockButton) {
+      lockButton.addEventListener("click", () => {
+        setUnlocked(false);
+      });
+    }
+
+    restoreState();
+  </script>
+</body>
+</html>
