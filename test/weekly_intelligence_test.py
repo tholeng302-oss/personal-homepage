@@ -18,7 +18,10 @@ class WeeklyIntelligenceTest(unittest.TestCase):
             "carbon",
             "scenery",
         }
-        self.assertEqual({topic["id"] for topic in data["topics"]}, expected_topic_ids)
+        topic_ids = {topic["id"] for topic in data["topics"]}
+        self.assertEqual(len(data["topics"]), 9)
+        self.assertEqual(len(topic_ids), len(data["topics"]))
+        self.assertEqual(topic_ids, expected_topic_ids)
         for topic in data["topics"]:
             self.assertTrue(
                 {"name", "nameEn", "sources", "feeds", "items"}.issubset(topic),
