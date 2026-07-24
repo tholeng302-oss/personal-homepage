@@ -79,10 +79,18 @@ class WeeklyIntelligenceTest(unittest.TestCase):
     def test_intelligence_desk_cadences_are_explicit(self):
         script = Path("script.js").read_text()
 
-        for cadence in ('cadence: "每周"', 'cadence: "每月"', 'cadence: "每日/每周"'):
-            self.assertIn(cadence, script)
-        for cadence in ('cadence: "Weekly"', 'cadence: "Monthly"', 'cadence: "Daily / Weekly"'):
-            self.assertIn(cadence, script)
+        expected_cadences = {
+            "green-fuels": ("每周", "Weekly"),
+            "hydrogen-biogas": ("每月", "Monthly"),
+            "markets-carbon": ("每日/每周", "Daily / Weekly"),
+        }
+
+        for desk_id, (chinese_cadence, english_cadence) in expected_cadences.items():
+            for cadence in (chinese_cadence, english_cadence):
+                self.assertRegex(
+                    script,
+                    rf'id: "{desk_id}",\s*title: "[^"]+",\s*cadence: "{cadence}"',
+                )
 
     def test_authority_source_links_are_rendered_only_in_global_directory(self):
         script = Path("script.js").read_text()
