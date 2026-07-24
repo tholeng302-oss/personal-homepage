@@ -674,12 +674,12 @@ function renderWeeklyIntelligence() {
         </div>
         <div class="focus-items">
           ${topic.items.slice(0, 3).map((item) => `
-            <a class="focus-item" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">
+            <article class="focus-item">
               <span class="tag">${escapeHtml(item.kind)}</span>
               <h3>${escapeHtml(locale === "zh" ? item.title : item.titleEn)}</h3>
               <p>${escapeHtml(locale === "zh" ? item.summary : item.summaryEn)}</p>
               <span class="focus-item-meta">${escapeHtml(item.source)} · ${escapeHtml(item.publishedAt)}</span>
-            </a>
+            </article>
           `).join("")}
         </div>
       </article>
@@ -707,12 +707,12 @@ function renderWeeklyIntelligence() {
                 <p class="focus-topic-label">${escapeHtml(locale === "zh" ? topic.name : topic.nameEn)}</p>
                 <div class="focus-items">
                   ${topic.items.slice(0, 3).map((item) => `
-                    <a class="focus-item" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">
+                    <article class="focus-item">
                       <span class="tag">${escapeHtml(item.kind)}</span>
                       <h4>${escapeHtml(locale === "zh" ? item.title : item.titleEn)}</h4>
                       <p>${escapeHtml(locale === "zh" ? item.summary : item.summaryEn)}</p>
                       <span class="focus-item-meta">${escapeHtml(item.source)} · ${escapeHtml(item.publishedAt)}</span>
-                    </a>
+                    </article>
                   `).join("")}
                 </div>
               </section>

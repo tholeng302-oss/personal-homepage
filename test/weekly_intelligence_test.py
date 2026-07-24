@@ -66,10 +66,36 @@ class WeeklyIntelligenceTest(unittest.TestCase):
         script = Path("script.js").read_text()
 
         self.assertIn('specialFocusTopicIds = new Set(["ai", "scenery"])', script)
-        self.assertIn('green-fuels', script)
-        self.assertIn('hydrogen-biogas', script)
-        self.assertIn('markets-carbon', script)
+        self.assertIn(
+            '''const intelligenceDeskGroups = [
+  { id: "green-fuels", topicIds: ["methanol", "saf", "ammonia"] },
+  { id: "hydrogen-biogas", topicIds: ["hydrogen", "biogas"] },
+  { id: "markets-carbon", topicIds: ["stocks", "carbon"] }
+];''',
+            script,
+        )
         self.assertIn('global-resource-directory', script)
+
+    def test_intelligence_desk_cadences_are_explicit(self):
+        script = Path("script.js").read_text()
+
+        for cadence in ('cadence: "每周"', 'cadence: "每月"', 'cadence: "每日/每周"'):
+            self.assertIn(cadence, script)
+        for cadence in ('cadence: "Weekly"', 'cadence: "Monthly"', 'cadence: "Daily / Weekly"'):
+            self.assertIn(cadence, script)
+
+    def test_authority_source_links_are_rendered_only_in_global_directory(self):
+        script = Path("script.js").read_text()
+        global_directory_start = script.index('if (resourceDirectory && resourceDesk)')
+        global_directory = script[global_directory_start:]
+        item_rendering = script[:global_directory_start]
+
+        self.assertEqual(script.count('topic.sources.map'), 1)
+        self.assertIn('topic.sources.map', global_directory)
+        self.assertNotIn('topic.sources.map', item_rendering)
+        self.assertNotIn('<a class="focus-item"', item_rendering)
+        self.assertNotIn('href="${escapeHtml(item.url)}"', item_rendering)
+        self.assertIn('<article class="focus-item">', item_rendering)
 
     def test_special_focus_signal_copy_only_names_ai_and_cultural_landscapes(self):
         script = Path("script.js").read_text()
