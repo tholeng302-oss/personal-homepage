@@ -5,7 +5,7 @@ const siteContent = {
     metaDescription: "彼得大帝的个人观察站，汇集足迹、家人记忆、绿色能源观察与财富研究。",
     nav: {
       about: "关于",
-      focus: "关注方向",
+      focus: "特别关注",
       panorama: "全景",
       memories: "记忆",
       intelligence: "情报",
@@ -31,7 +31,7 @@ const siteContent = {
       miniBio: "开放式创新探索者 · 绿色化工能源践行者 · 财富价值创造者",
       signals: [
         { label: "时区", value: "亚洲/新疆" },
-        { label: "关注方向", value: "AI、绿色燃料、氢能、沼气、股市、碳交易、风景" },
+        { label: "特别关注", value: "AI、绿色燃料、氢能、沼气、股市、碳交易、风景" },
         { label: "运行方式", value: "公开展示 + 授权归档 + 全球阶段汇总" }
       ]
     },
@@ -192,6 +192,7 @@ const siteContent = {
     },
     intelligence: [
       {
+        id: "green-fuels",
         title: "绿色燃料周报",
         cadence: "每周",
         scope: "全球绿色甲醇、SAF、绿色氨、绿色化工燃料项目与交易动态。",
@@ -199,6 +200,7 @@ const siteContent = {
         status: "阶段汇总中"
       },
       {
+        id: "hydrogen-biogas",
         title: "氢能与沼气月度观察",
         cadence: "每月",
         scope: "氢能基础设施、沼气/填埋气项目、政策变化、设备与价格信号。",
@@ -206,6 +208,7 @@ const siteContent = {
         status: "持续更新"
       },
       {
+        id: "markets-carbon",
         title: "股市与碳交易观察",
         cadence: "每日/每周",
         scope: "重点股票、碳市场价格、行业情绪、政策事件与价值线索。",
@@ -213,7 +216,8 @@ const siteContent = {
         status: "自动阶段收集中"
       },
       {
-        title: "全球信息源调度台",
+        id: "global-resource-directory",
+        title: "全球信息资源调度台",
         cadence: "按计划运行",
         scope: "媒体、官方机构、研究报告、项目公告、交易所信息与数据库。",
         mode: "来源分级 + 节奏汇总",
@@ -265,7 +269,7 @@ const siteContent = {
     metaDescription: "Peter the Great's personal observatory for memories, family archives, green energy intelligence, and investment research.",
     nav: {
       about: "About",
-      focus: "Focus",
+      focus: "Special focus",
       panorama: "Panorama",
       memories: "Memories",
       intelligence: "Intelligence",
@@ -291,7 +295,7 @@ const siteContent = {
       miniBio: "Open-innovation explorer · Green energy and chemical practitioner · Value creator",
       signals: [
         { label: "Timezone", value: "Asia/xinjiang" },
-        { label: "Focus", value: "AI, green fuels, hydrogen, biogas, stocks, carbon trading, landscapes" },
+        { label: "Special focus", value: "AI, green fuels, hydrogen, biogas, stocks, carbon trading, landscapes" },
         { label: "Operating Mode", value: "public display + private archive + global staged summaries" }
       ]
     },
@@ -452,6 +456,7 @@ const siteContent = {
     },
     intelligence: [
       {
+        id: "green-fuels",
         title: "Green Fuels Weekly",
         cadence: "Weekly",
         scope: "Global green methanol, SAF, green ammonia, project updates, and trade signals.",
@@ -459,6 +464,7 @@ const siteContent = {
         status: "Stage summaries running"
       },
       {
+        id: "hydrogen-biogas",
         title: "Hydrogen and Biogas Monthly",
         cadence: "Monthly",
         scope: "Hydrogen infrastructure, biogas/landfill gas projects, policy movement, equipment, and price signals.",
@@ -466,6 +472,7 @@ const siteContent = {
         status: "Continuously updated"
       },
       {
+        id: "markets-carbon",
         title: "Equities and Carbon Desk",
         cadence: "Daily / Weekly",
         scope: "Key stocks, carbon market pricing, sector sentiment, policy events, and value clues.",
@@ -473,7 +480,8 @@ const siteContent = {
         status: "Automated staging in progress"
       },
       {
-        title: "Global Source Orchestrator",
+        id: "global-resource-directory",
+        title: "Global Intelligence Resource Desk",
         cadence: "Scheduled",
         scope: "Media, official agencies, research reports, project announcements, exchanges, and databases.",
         mode: "Source tiers + cadence-based summaries",
@@ -525,6 +533,14 @@ const state = {
   locale: "zh",
   weeklyIntelligence: null
 };
+
+const specialFocusTopicIds = new Set(["ai", "scenery"]);
+
+const intelligenceDeskGroups = [
+  { id: "green-fuels", topicIds: ["methanol", "saf", "ammonia"] },
+  { id: "hydrogen-biogas", topicIds: ["hydrogen", "biogas"] },
+  { id: "markets-carbon", topicIds: ["stocks", "carbon"] }
+];
 
 function setText(id, value) {
   const element = document.getElementById(id);
@@ -629,35 +645,28 @@ function formatUpdateDate(value, locale) {
 function renderWeeklyIntelligence() {
   const data = state.weeklyIntelligence;
   const locale = state.locale;
-  const directory = document.getElementById("focus-directory");
   const weekly = document.getElementById("focus-weekly");
+  const liveBriefs = document.getElementById("intel-live-briefs");
+  const resourceDirectory = document.getElementById("global-resource-directory");
+  const intelligenceContent = siteContent[locale].intelligence;
+  const resourceDesk = intelligenceContent.find((item) => item.id === "global-resource-directory");
 
-  setText("focus-kicker", locale === "zh" ? "FOCUS AREAS · WEEKLY DESK" : "FOCUS AREAS · WEEKLY DESK");
-  setText("focus-title", locale === "zh" ? "关注方向" : "Focus areas");
-  setText("focus-intro", locale === "zh" ? "权威来源网络与本周信息汇总。每个主题保留不超过三条最新条目。" : "A trusted source network and weekly briefing. Each topic retains no more than three current entries.");
+  setText("focus-kicker", locale === "zh" ? "SPECIAL FOCUS · WEEKLY DESK" : "SPECIAL FOCUS · WEEKLY DESK");
+  setText("focus-title", locale === "zh" ? "特别关注" : "Special focus");
+  setText("focus-intro", locale === "zh" ? "人工智能与风景文化的本周信号。每个主题保留不超过三条最新条目。" : "Weekly signals for artificial intelligence and landscapes. Each topic retains no more than three current entries.");
 
   if (!data || !Array.isArray(data.topics)) {
     setText("focus-updated", locale === "zh" ? "暂时无法载入更新，保留上次内容。" : "The update is unavailable; the last published brief is retained.");
-    if (directory) directory.innerHTML = "";
     if (weekly) weekly.innerHTML = "";
+    if (liveBriefs) liveBriefs.innerHTML = "";
+    if (resourceDirectory) resourceDirectory.innerHTML = "";
     return;
   }
 
   setText("focus-updated", `${locale === "zh" ? "最后成功更新" : "Last successful update"} · ${formatUpdateDate(data.updatedAt, locale)}`);
 
-  if (directory) {
-    directory.innerHTML = data.topics.map((topic) => `
-      <article class="focus-source-card">
-        <p class="focus-topic-label">${escapeHtml(locale === "zh" ? topic.name : topic.nameEn)}</p>
-        <div class="focus-source-links">
-          ${topic.sources.map((source) => `<a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(source.name)} <span aria-hidden="true">↗</span></a>`).join("")}
-        </div>
-      </article>
-    `).join("");
-  }
-
   if (weekly) {
-    weekly.innerHTML = data.topics.map((topic) => `
+    weekly.innerHTML = data.topics.filter((topic) => specialFocusTopicIds.has(topic.id)).map((topic) => `
       <article class="focus-topic-card">
         <div class="focus-topic-head">
           <p class="focus-topic-label">${escapeHtml(locale === "zh" ? topic.name : topic.nameEn)}</p>
@@ -675,6 +684,63 @@ function renderWeeklyIntelligence() {
         </div>
       </article>
     `).join("");
+  }
+
+  if (liveBriefs) {
+    liveBriefs.innerHTML = intelligenceDeskGroups.map((group) => {
+      const desk = intelligenceContent.find((item) => item.id === group.id);
+      const topics = group.topicIds
+        .map((topicId) => data.topics.find((topic) => topic.id === topicId))
+        .filter(Boolean);
+
+      return `
+        <article class="intel-card intel-live-card">
+          <div class="intel-topline">
+            <span class="tag">${escapeHtml(desk.cadence)}</span>
+            <span class="tag">${escapeHtml(desk.status)}</span>
+          </div>
+          <h3>${escapeHtml(desk.title)}</h3>
+          <p>${escapeHtml(desk.scope)}</p>
+          <div class="intel-topic-briefs">
+            ${topics.map((topic) => `
+              <section class="intel-topic-brief">
+                <p class="focus-topic-label">${escapeHtml(locale === "zh" ? topic.name : topic.nameEn)}</p>
+                <div class="focus-items">
+                  ${topic.items.slice(0, 3).map((item) => `
+                    <a class="focus-item" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">
+                      <span class="tag">${escapeHtml(item.kind)}</span>
+                      <h4>${escapeHtml(locale === "zh" ? item.title : item.titleEn)}</h4>
+                      <p>${escapeHtml(locale === "zh" ? item.summary : item.summaryEn)}</p>
+                      <span class="focus-item-meta">${escapeHtml(item.source)} · ${escapeHtml(item.publishedAt)}</span>
+                    </a>
+                  `).join("")}
+                </div>
+              </section>
+            `).join("")}
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
+
+  if (resourceDirectory && resourceDesk) {
+    resourceDirectory.innerHTML = `
+      <div class="global-resource-heading">
+        <p class="section-kicker">GLOBAL DIRECTORY</p>
+        <h3>${escapeHtml(resourceDesk.title)}</h3>
+        <p>${escapeHtml(resourceDesk.scope)}</p>
+      </div>
+      <div class="global-resource-grid">
+        ${data.topics.map((topic) => `
+          <article class="global-resource-card">
+            <p class="focus-topic-label">${escapeHtml(locale === "zh" ? topic.name : topic.nameEn)}</p>
+            <div class="global-resource-links">
+              ${topic.sources.map((source) => `<a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(source.name)} <span aria-hidden="true">↗</span></a>`).join("")}
+            </div>
+          </article>
+        `).join("")}
+      </div>
+    `;
   }
 }
 
@@ -827,29 +893,6 @@ function renderPrivateVault(content) {
     .join("");
 }
 
-function renderIntelligence(content) {
-  const container = document.getElementById("intel-grid");
-  if (!container) {
-    return;
-  }
-
-  container.innerHTML = content.intelligence
-    .map(
-      (item) => `
-        <article class="intel-card">
-          <div class="intel-topline">
-            <span class="tag">${item.cadence}</span>
-            <span class="tag">${item.status}</span>
-          </div>
-          <h3>${item.title}</h3>
-          <p>${item.scope}</p>
-          <p class="intel-mode">${item.mode}</p>
-        </article>
-      `
-    )
-    .join("");
-}
-
 function renderAccess(content) {
   const container = document.getElementById("access-grid");
   if (!container) {
@@ -957,7 +1000,6 @@ function applyLocale(locale) {
   renderWeeklyIntelligence();
   renderPublicGallery(content);
   renderPrivateVault(content);
-  renderIntelligence(content);
   renderAccess(content);
   renderContacts(content);
 }

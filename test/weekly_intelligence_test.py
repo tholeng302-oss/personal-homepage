@@ -42,6 +42,15 @@ class WeeklyIntelligenceTest(unittest.TestCase):
         self.assertIn('id="weekly-intelligence"', html)
         self.assertIn('fetch("data/weekly-intelligence.json")', script)
 
+    def test_special_focus_and_intelligence_mounts_exist(self):
+        html = Path("index.html").read_text()
+        script = Path("script.js").read_text()
+
+        self.assertIn('id="intel-live-briefs"', html)
+        self.assertIn('id="global-resource-directory"', html)
+        self.assertIn('"特别关注"', script)
+        self.assertIn('"全球信息资源调度台"', script)
+
     def test_topic_routing_contract(self):
         script = Path("script.js").read_text()
 
