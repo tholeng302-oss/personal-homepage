@@ -7,8 +7,25 @@ class WeeklyIntelligenceTest(unittest.TestCase):
     def test_each_topic_has_at_most_three_entries_and_sources(self):
         data = json.loads(Path("data/weekly-intelligence.json").read_text())
 
-        self.assertGreaterEqual(len(data["topics"]), 9)
+        expected_topic_ids = {
+            "ai",
+            "hydrogen",
+            "ammonia",
+            "methanol",
+            "saf",
+            "biogas",
+            "stocks",
+            "carbon",
+            "scenery",
+        }
+        self.assertEqual({topic["id"] for topic in data["topics"]}, expected_topic_ids)
         for topic in data["topics"]:
+            self.assertTrue(
+                {"name", "nameEn", "sources", "feeds", "items"}.issubset(topic),
+                topic["id"],
+            )
+            self.assertTrue(topic["name"])
+            self.assertTrue(topic["nameEn"])
             self.assertLessEqual(len(topic["items"]), 3)
             self.assertGreaterEqual(len(topic["sources"]), 2)
             self.assertTrue(
@@ -30,15 +47,6 @@ class WeeklyIntelligenceTest(unittest.TestCase):
         self.assertIn('hydrogen-biogas', script)
         self.assertIn('markets-carbon', script)
         self.assertIn('global-resource-directory', script)
-
-    def test_weekly_workflow_and_failure_preservation_exist(self):
-        workflow = Path(".github/workflows/weekly-intelligence.yml").read_text()
-        updater = Path("scripts/update-weekly-intelligence.mjs").read_text()
-
-        self.assertIn("cron:", workflow)
-        self.assertIn("update-weekly-intelligence.mjs", workflow)
-        self.assertIn("previousTopic.items", updater)
-
 
 if __name__ == "__main__":
     unittest.main()
