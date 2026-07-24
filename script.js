@@ -481,7 +481,7 @@ const siteContent = {
       },
       {
         id: "global-resource-directory",
-        title: "Global Intelligence Resource Desk",
+        title: "Global Information Resource Dispatch Desk",
         cadence: "Scheduled",
         scope: "Media, official agencies, research reports, project announcements, exchanges, and databases.",
         mode: "Source tiers + cadence-based summaries",

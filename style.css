@@ -664,7 +664,6 @@ body::before {
 }
 
 .panorama-grid,
-.intel-grid,
 .access-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1190,7 +1189,6 @@ body::before {
   .roadmap-list,
   .contact-links,
   .panorama-grid,
-  .intel-grid,
   .access-grid,
   .memory-split,
   .photo-gallery,
@@ -1403,7 +1401,7 @@ body::before {
 .contact-section { background: transparent; }
 .contact-links { gap: 0; border-top: 1px solid var(--line); }
 .contact-link { gap: 12px; }
-.panorama-grid, .intel-grid, .access-grid { gap: 0; border-top: 1px solid var(--line); }
+.panorama-grid, .access-grid { gap: 0; border-top: 1px solid var(--line); }
 .panorama-card, .intel-card, .access-card { background: transparent; }
 .panorama-card { padding-top: 48px; }
 .memory-split { gap: 0; border-top: 1px solid var(--line); }
@@ -1558,7 +1556,7 @@ body::before {
   .section { margin-bottom: 58px; }
   .section-heading h2 { font-size: 3rem; }
   .section-heading { gap: 16px; }
-  .cards-grid, .roadmap-list, .contact-links, .panorama-grid, .intel-grid, .access-grid, .memory-split, .photo-gallery, .calendar-grid, .family-grid, .family-protocol-grid { border-top: 1px solid var(--line); }
+  .cards-grid, .roadmap-list, .contact-links, .panorama-grid, .access-grid, .memory-split, .photo-gallery, .calendar-grid, .family-grid, .family-protocol-grid { border-top: 1px solid var(--line); }
   .fact-card, .skill-card, .roadmap-card, .panorama-card, .gallery-card, .vault-card, .intel-card, .access-card, .family-card, .contact-link, .memory-column { border-right: 0; }
   .focus-items, .global-resource-grid { grid-template-columns: 1fr; }
   .global-resource-card, .global-resource-card:nth-child(3n), .global-resource-card:nth-child(2n), .focus-item { border-right: 0; }

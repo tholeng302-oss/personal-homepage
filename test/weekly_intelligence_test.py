@@ -51,6 +51,17 @@ class WeeklyIntelligenceTest(unittest.TestCase):
         self.assertIn('"特别关注"', script)
         self.assertIn('"全球信息资源调度台"', script)
 
+    def test_english_resource_desk_uses_the_approved_visible_title(self):
+        script = Path("script.js").read_text()
+
+        self.assertIn('title: "Global Information Resource Dispatch Desk"', script)
+        self.assertNotIn('title: "Global Intelligence Resource Desk"', script)
+
+    def test_stylesheet_does_not_keep_the_unmounted_intel_grid_selector(self):
+        stylesheet = Path("style.css").read_text()
+
+        self.assertNotIn(".intel-grid", stylesheet)
+
     def test_topic_routing_contract(self):
         script = Path("script.js").read_text()
 
