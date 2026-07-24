@@ -71,5 +71,17 @@ class WeeklyIntelligenceTest(unittest.TestCase):
         self.assertIn('markets-carbon', script)
         self.assertIn('global-resource-directory', script)
 
+    def test_special_focus_signal_copy_only_names_ai_and_cultural_landscapes(self):
+        script = Path("script.js").read_text()
+
+        self.assertIn(
+            '{ label: "特别关注", value: "AI、风景/文化景观" }',
+            script,
+        )
+        self.assertIn(
+            '{ label: "Special focus", value: "AI, scenery/cultural landscapes" }',
+            script,
+        )
+
 if __name__ == "__main__":
     unittest.main()

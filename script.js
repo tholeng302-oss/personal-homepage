@@ -31,7 +31,7 @@ const siteContent = {
       miniBio: "开放式创新探索者 · 绿色化工能源践行者 · 财富价值创造者",
       signals: [
         { label: "时区", value: "亚洲/新疆" },
-        { label: "特别关注", value: "AI、绿色燃料、氢能、沼气、股市、碳交易、风景" },
+        { label: "特别关注", value: "AI、风景/文化景观" },
         { label: "运行方式", value: "公开展示 + 授权归档 + 全球阶段汇总" }
       ]
     },
@@ -295,7 +295,7 @@ const siteContent = {
       miniBio: "Open-innovation explorer · Green energy and chemical practitioner · Value creator",
       signals: [
         { label: "Timezone", value: "Asia/xinjiang" },
-        { label: "Special focus", value: "AI, green fuels, hydrogen, biogas, stocks, carbon trading, landscapes" },
+        { label: "Special focus", value: "AI, scenery/cultural landscapes" },
         { label: "Operating Mode", value: "public display + private archive + global staged summaries" }
       ]
     },
