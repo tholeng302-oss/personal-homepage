@@ -1383,6 +1383,13 @@ body::before {
 
 .section-heading { align-items: end; margin-bottom: 36px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
 .section-heading h2 { max-width: 16ch; font-size: clamp(2.8rem, 4.4vw, 4.8rem); line-height: 0.9; letter-spacing: -0.04em; }
+html[lang="zh-CN"] #hero-name,
+html[lang="zh-CN"] #intelligence-title,
+html[lang="zh-CN"] #access-title,
+html[lang="zh-CN"] #contact-title {
+  max-width: none;
+  white-space: nowrap;
+}
 .section-side-note { max-width: 35ch; font-size: 0.72rem; letter-spacing: 0.12em; }
 .about-grid { gap: 48px; }
 .quote-panel { padding: 30px 0 0 34px; border: 0; border-left: 2px solid var(--accent); border-radius: 0; background: transparent; }
@@ -1555,6 +1562,10 @@ body::before {
   .signal-card, .signal-card + .signal-card { padding: 14px 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .section { margin-bottom: 58px; }
   .section-heading h2 { font-size: 3rem; }
+  html[lang="zh-CN"] #hero-name,
+  html[lang="zh-CN"] #intelligence-title,
+  html[lang="zh-CN"] #access-title,
+  html[lang="zh-CN"] #contact-title { font-size: clamp(1.7rem, 8vw, 2.4rem); }
   .section-heading { gap: 16px; }
   .cards-grid, .roadmap-list, .contact-links, .panorama-grid, .access-grid, .memory-split, .photo-gallery, .calendar-grid, .family-grid, .family-protocol-grid { border-top: 1px solid var(--line); }
   .fact-card, .skill-card, .roadmap-card, .panorama-card, .gallery-card, .vault-card, .intel-card, .access-card, .family-card, .contact-link, .memory-column { border-right: 0; }
