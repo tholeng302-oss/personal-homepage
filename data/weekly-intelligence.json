@@ -1,35 +1,53 @@
 {
-  "updatedAt": "2026-07-24T09:00:00+08:00",
+  "updatedAt": "2026-07-27T04:29:27.194Z",
   "topics": [
     {
       "id": "ai",
       "name": "人工智能",
       "nameEn": "Artificial intelligence",
       "sources": [
-        { "name": "Stanford AI Index", "url": "https://hai.stanford.edu/ai-index" },
-        { "name": "OECD.AI", "url": "https://oecd.ai/en/" }
-      ],
-      "feeds": ["https://news.google.com/rss/search?q=artificial+intelligence+research+policy&hl=en-US&gl=US&ceid=US:en"],
-      "items": [
         {
-          "title": "Stanford 发布 2026 AI Index",
-          "titleEn": "Stanford publishes the 2026 AI Index",
-          "summary": "年度报告覆盖模型能力、投资、采用、治理与社会影响，为跨区域比较提供独立数据框架。",
-          "summaryEn": "The annual report tracks model capability, investment, adoption, governance and societal impact with independently compiled data.",
-          "source": "Stanford HAI",
-          "url": "https://hai.stanford.edu/ai-index",
-          "publishedAt": "2026-06-01",
-          "kind": "研究"
+          "name": "Stanford AI Index",
+          "url": "https://hai.stanford.edu/ai-index"
         },
         {
-          "title": "OECD.AI 汇集全球 AI 政策与治理资料",
-          "titleEn": "OECD.AI tracks global AI policy and governance",
-          "summary": "可用于跟踪各国的 AI 战略、法规、创新生态与可信 AI 政策进展。",
-          "summaryEn": "The policy observatory tracks national strategies, regulation, innovation ecosystems and trustworthy-AI work.",
-          "source": "OECD.AI",
-          "url": "https://oecd.ai/en/",
-          "publishedAt": "2026-07-01",
-          "kind": "政策"
+          "name": "OECD.AI",
+          "url": "https://oecd.ai/en/"
+        }
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=artificial+intelligence+research+policy&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "items": [
+        {
+          "title": "Repaying the inheritance: How education and research policy can address AI's borrowed expertise - Brookings",
+          "titleEn": "Repaying the inheritance: How education and research policy can address AI's borrowed expertise - Brookings",
+          "summary": "来自 人工智能 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Artificial intelligence monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNVzNRMlAzcEhIRXYtNndEbHlBX1Jua1dQTlJyTVBWVnFrbWY4dkE3REVtQ1pvN0F5ZG5KdlctblNRMkZWY1JzUzlyakR2VC1BU1ZIYTlhNU4xZ01CaVlZZUNMVDVtUUdEc3F4cDI5SmQ2SG9zMFdFdkVwYzhXQjlQWVBtbTBtLWl0TzdyWi1DMTBNaGNMcVFlYVh5UnhSMXZmcjdqd1ZvZW9RZ0YtRG1VYmF6OHQyQ3UwS2l1ZTJoSXpEclNSSnBxUQ?oc=5",
+          "publishedAt": "2026-07-20",
+          "kind": "新闻"
+        },
+        {
+          "title": "Trump administration steers $5B toward AI research - Politico",
+          "titleEn": "Trump administration steers $5B toward AI research - Politico",
+          "summary": "来自 人工智能 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Artificial intelligence monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQYlVzaFJoUlpUbzRick9SN1JubEE3ZlFCaGNNZ1Zkd0ZDZGZRcGtxWmxuc0xvZmZ4a0Q0NEhrbWIzRmoxcU5aOUYtWktsYUpHd2NMTzdYczh0ZEFPVHRLUFJtQkI4NS1EREw4TzdzX0lTY3hrNE5yRFgwZ2lDN1VPYURkOUR2MXNUWFhRcmIyOFhfc3JOVl9ETmtzaDRqaEg0?oc=5",
+          "publishedAt": "2026-07-22",
+          "kind": "新闻"
+        },
+        {
+          "title": "White House offers its science blueprint: More AI, less life sciences - STAT",
+          "titleEn": "White House offers its science blueprint: More AI, less life sciences - STAT",
+          "summary": "来自 人工智能 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Artificial intelligence monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNSlZUSUFpNlJNSlBMbjJZeGtWd29vWUpBZ2VmNng1Qll2YzJkY0dZbWlvMTF4NlFOZ0RuTGJLYnM5UUZhMl8yY0Njd0lFQlBpRm9PNmlnSmpxTG16M3NPU3UyM1pBaGsta21ObzY5Q05KcGRLR0RXSElmMHNadjR5SWltYW02UVJGZm4wbWgyZXc?oc=5",
+          "publishedAt": "2026-07-24",
+          "kind": "新闻"
         }
       ]
     },
@@ -38,20 +56,48 @@
       "name": "绿色氢能",
       "nameEn": "Clean hydrogen",
       "sources": [
-        { "name": "IEA Hydrogen Tracker", "url": "https://www.iea.org/data-and-statistics/data-tools/hydrogen-tracker" },
-        { "name": "IEA Global Hydrogen Review", "url": "https://www.iea.org/reports/global-hydrogen-review-2026" }
+        {
+          "name": "IEA Hydrogen Tracker",
+          "url": "https://www.iea.org/data-and-statistics/data-tools/hydrogen-tracker"
+        },
+        {
+          "name": "IEA Global Hydrogen Review",
+          "url": "https://www.iea.org/reports/global-hydrogen-review-2026"
+        }
       ],
-      "feeds": ["https://news.google.com/rss/search?q=clean+hydrogen+project&hl=en-US&gl=US&ceid=US:en"],
+      "feeds": [
+        "https://news.google.com/rss/search?q=clean+hydrogen+project&hl=en-US&gl=US&ceid=US:en"
+      ],
       "items": [
         {
-          "title": "IEA 氢能追踪器更新项目、基础设施与承购数据",
-          "titleEn": "IEA tracker updates projects, infrastructure and offtake data",
-          "summary": "项目级数据涵盖低排放氢产能、管道、地下储氢与已签署承购协议。",
-          "summaryEn": "Project-level data covers low-emissions production, pipelines, storage and signed offtake agreements.",
-          "source": "IEA",
-          "url": "https://www.iea.org/data-and-statistics/data-tools/hydrogen-tracker",
-          "publishedAt": "2026-06-18",
-          "kind": "数据"
+          "title": "Air Products cancels blue hydrogen project in Louisiana - C&EN",
+          "titleEn": "Air Products cancels blue hydrogen project in Louisiana - C&EN",
+          "summary": "来自 绿色氢能 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Clean hydrogen monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOYlZIOTRneGtQLW43emNjNEpucV9PcWZaRWtNYlJOLS1tQnhaUnFUMFZKS1h6cWZOdU1FenBpQUtpTDl1THFYZnNiNlBHY21hYlMzdG15MU95dGMyR0d2NzQ5WWFTZlB5YVNiLW15bEtrR1FaTG92Ni1EdXltSlpKVUtPWm9CdXhiU0pkcG5KZ1JnSlBaRHVZ?oc=5",
+          "publishedAt": "2026-07-20",
+          "kind": "新闻"
+        },
+        {
+          "title": "Clean Hydrogen Partnership Selects 13 Hydrogen Valleys for Project Development Assistance - Fuel Cells Works",
+          "titleEn": "Clean Hydrogen Partnership Selects 13 Hydrogen Valleys for Project Development Assistance - Fuel Cells Works",
+          "summary": "来自 绿色氢能 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Clean hydrogen monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQcHVBMkVsMEZmN3cwRkN0dEF0MXNkTEFjZ1YyZnBLMjZyVW5vRXl4QTB1UTZ5MWRKa05QRldsTm83dmJDX1N5RUtJU1l6SUJocFR3bnV6UzVxdElkU0EwWDlPX1MyWksycC0yVVpfdjNubF9nNHZMWjJUM2lfN3pVV1hmRlFfUkVIUENYdGk2bV9EM3ByZ0NOeUppSzN3NEUzSTAwVVQ4WXF4cWU4Ni1SVWtKZ3BYLUtvOGlEcWZOb2F3SnUtaUUtM01nTWJVVDh2VV9XVHplcmVNZE1r?oc=5",
+          "publishedAt": "2026-07-21",
+          "kind": "新闻"
+        },
+        {
+          "title": "How Air Products' Clean Hydrogen Project Exit and NEOM Ammonia Deal Will Impact Air Products and Chemicals (APD) Investors - simplywall.st",
+          "titleEn": "How Air Products' Clean Hydrogen Project Exit and NEOM Ammonia Deal Will Impact Air Products and Chemicals (APD) Investors - simplywall.st",
+          "summary": "来自 绿色氢能 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Clean hydrogen monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOMDltbmtSTlM2b2hnWjJ4Y3dFaFMxc0NhNkhoMVBBRWNoMG1TZEZORElpQXN3YWs1azU2MmNKbEs0VGp0Y1pwR05PRzkycF9qUkY5WTFrRlNXY0xORzMyeEVLWXh2WTR4T2ZhekxPSHdsMDVpQXlTWGEzNlRROWFacWVNQVRTSTBfWTNxbzZudVlpQk9TbFd6NV9DcUVMcHNBdHVLeEVBbVNzR0tnRVVFeTJneFFQam1Pb3RHWUFPVEdkVWxQV3hRbVd6WDZYMVBBQlA4bEk0Qld5bW_SAeABQVVfeXFMUGZlNkRDNnFzNmgwcFE4RndrWV9tYVZBbWwtVjhFeUVBY1UtcU8yYk96YXVuSUkzeXNRV3pmYy1kY2lQVXNPZ1RtZ19BdHNZTDBBWEpmX2ZOdTExcldXTW13SFZTTUc0LV82ZzVZM181eDNWczFUMzFqZmN0c0lfZXMxQjQtQVJDNC12REhOY2NuOEQ3TlN2M09QQklOaFpNUHlEbTlqbU1ILXQ4TmkxSDNQcDBWY3VERGFiVzZrTThCSU15TnRVTWs4RllkYS02d2lPTUpvQkdheE5LaUpkODk?oc=5",
+          "publishedAt": "2026-07-11",
+          "kind": "新闻"
         }
       ]
     },
@@ -60,20 +106,48 @@
       "name": "绿氨",
       "nameEn": "Green ammonia",
       "sources": [
-        { "name": "IEA Hydrogen Tracker", "url": "https://www.iea.org/data-and-statistics/data-tools/hydrogen-tracker" },
-        { "name": "Ammonia Energy Association", "url": "https://ammoniaenergy.org/" }
+        {
+          "name": "IEA Hydrogen Tracker",
+          "url": "https://www.iea.org/data-and-statistics/data-tools/hydrogen-tracker"
+        },
+        {
+          "name": "Ammonia Energy Association",
+          "url": "https://ammoniaenergy.org/"
+        }
       ],
-      "feeds": ["https://news.google.com/rss/search?q=green+ammonia+project&hl=en-US&gl=US&ceid=US:en"],
+      "feeds": [
+        "https://news.google.com/rss/search?q=green+ammonia+project&hl=en-US&gl=US&ceid=US:en"
+      ],
       "items": [
         {
-          "title": "绿氨作为氢衍生品进入项目与政策追踪",
-          "titleEn": "Green ammonia enters project and policy tracking",
-          "summary": "关注可再生电力、制氢、合成氨、港口储运与终端承购之间的完整链条。",
-          "summaryEn": "Track the chain from renewable power and hydrogen through synthesis, port logistics and offtake.",
-          "source": "IEA",
-          "url": "https://www.iea.org/data-and-statistics/data-tools/hydrogen-tracker",
-          "publishedAt": "2026-06-18",
-          "kind": "数据"
+          "title": "Green ammonia project aims to keep fertilizer dollars in Minnesota - University of Minnesota Twin Cities",
+          "titleEn": "Green ammonia project aims to keep fertilizer dollars in Minnesota - University of Minnesota Twin Cities",
+          "summary": "来自 绿氨 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Green ammonia monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOU3Q4OGREendBWS1aQXAzZldkdjIwZklNSlZmRUpEMk91U3RielczeXprb3NPR29SeXF0dGFndjl3SDU5SlZCMGQ4NHBDUjdQTTRjQVdUaEQ5bWZJR2lHM0hTOFp6YXB0RE1KbUJBT0hpVENlcUJEZFRranpIbktjNzBUYmJnZHowLWJPRU1nNzlEbURnSFZKNE1lS0RUQ3NNUlE?oc=5",
+          "publishedAt": "2026-06-26",
+          "kind": "新闻"
+        },
+        {
+          "title": "Consorcio Austral Unveils $4.7 Billion Green Hydrogen and Ammonia Project in Chile - ChemAnalyst",
+          "titleEn": "Consorcio Austral Unveils $4.7 Billion Green Hydrogen and Ammonia Project in Chile - ChemAnalyst",
+          "summary": "来自 绿氨 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Green ammonia monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNenp6d1E1NjBXai1RMDY1bXkwaW9zaFFRUTFweHpNYXcxajNmdDhaMWpJbUpjWWNZVHpDS0pxWE1uNGNBdDY1RF9zQk9SY050UnpkWXVOdF9Ha0t2Nm9iQ21QV2Y5VnA0WURscXlTM0ZCSlhzZkhfV1hhUkd3a0NrM1JFS19MSHhwcml0U1hjck5vRTdoS0tlNTBENTVjMzF1YlRoSGw4NHhyQ0lFV0pXTVR1SHZQOXBRai1xajVZS2U?oc=5",
+          "publishedAt": "2026-07-21",
+          "kind": "新闻"
+        },
+        {
+          "title": "Chile's $4.7B Green Ammonia Project Enters Review - Fuel Cells Works",
+          "titleEn": "Chile's $4.7B Green Ammonia Project Enters Review - Fuel Cells Works",
+          "summary": "来自 绿氨 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Green ammonia monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxON09aelc3ZllxMlFldkhqWEVwWFA0dk82TDF1WGRaMF9CbUVqTFAtX0dmVlRJZU11QlJxQmpSQW5PMkdDRUJWX3Y3WXZtRWtlcklzZWlNbHlSYWJlQk81YzhsMG1JUmt1YldhQTZwZGxUZ2xBbXI0ZEt2OFQ5MG5JRVk1RVVIWC1Vc3VwcXIybW51UU5nQmRPRE1EbF9BcmItbVBOMWg3d0Y4cm16X3FDLU5fQ21sZ3B1TjZjREp1OU5sbWdUOXpQRVhqcHg4dDBIQnlZQlM5YkhydWpoc3c?oc=5",
+          "publishedAt": "2026-07-20",
+          "kind": "新闻"
         }
       ]
     },
@@ -82,20 +156,48 @@
       "name": "绿色甲醇",
       "nameEn": "E-methanol",
       "sources": [
-        { "name": "Methanol Institute", "url": "https://www.methanol.org/" },
-        { "name": "IEA", "url": "https://www.iea.org/" }
+        {
+          "name": "Methanol Institute",
+          "url": "https://www.methanol.org/"
+        },
+        {
+          "name": "IEA",
+          "url": "https://www.iea.org/"
+        }
       ],
-      "feeds": ["https://news.google.com/rss/search?q=e-methanol+project&hl=en-US&gl=US&ceid=US:en"],
+      "feeds": [
+        "https://news.google.com/rss/search?q=e-methanol+project&hl=en-US&gl=US&ceid=US:en"
+      ],
       "items": [
         {
-          "title": "绿色甲醇应跟踪碳源、氢源与船舶承购",
-          "titleEn": "E-methanol tracking needs carbon, hydrogen and marine-offtake data",
-          "summary": "项目判断不只看名义产能，还应核对二氧化碳来源、绿氢成本、认证与长期承购。",
-          "summaryEn": "Project assessment should verify CO₂ source, green-hydrogen cost, certification and long-term offtake.",
-          "source": "Methanol Institute",
-          "url": "https://www.methanol.org/",
-          "publishedAt": "2026-07-01",
-          "kind": "行业"
+          "title": "Reolum Launches €2B Green E-Methanol Project in Spain - Fuel Cells Works",
+          "titleEn": "Reolum Launches €2B Green E-Methanol Project in Spain - Fuel Cells Works",
+          "summary": "来自 绿色甲醇 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the E-methanol monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNUmxLWkZpTXdHOWJMeGdKOVkwb2M0TXdKWjFlVFhDakZKZzA4Z0lmVlQxaWZobTlMajBONVVlWlFzR2ZaaW11REpnM0ZfT195aktnQ1RyU1ljNUt4TWZIVDBtMnB5aC1EbFVJOEJjRS1haU9rZHZpOWxrMG1YOEVGd0g2NnlGNlBaSEJEczh3c05BaXFjTFkxbDNIclF0ME5VNkw1RXJJaFdITFNkdlBzNTV5SXlqaW1LMUtTdVdjd3NRanU1Q3MyVW9DemV5SFN5SGViQVVncVR1alpDY0JjaUVJS0Rhei1ubkE?oc=5",
+          "publishedAt": "2026-07-09",
+          "kind": "新闻"
+        },
+        {
+          "title": "Icelandic tech firm installs record reactor at Chinese e-methanol plant - gasworld",
+          "titleEn": "Icelandic tech firm installs record reactor at Chinese e-methanol plant - gasworld",
+          "summary": "来自 绿色甲醇 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the E-methanol monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRTJ1emtQUkZwZUk3d1U1dTJaME8zQjg3dkNNUUVkMjlydE1BZGN4c1VqMGExTHNRU1UzV1dzZW12bk1fWVhxMHRmRzhtb0Jjamo2UG5EUmYyM29UZDZyZkhoVjNfMHF2NDdpLWRDOFlUMXRXMzgwVl9CblZTajQwRkJWd0RBcmJTbk9IR1lyMGo4M25qbGNwSUxIWkM0bDMxV3lxdjROSnZJNXlpbmhTSXU4eGZ2Vkw4Szg4?oc=5",
+          "publishedAt": "2026-07-07",
+          "kind": "新闻"
+        },
+        {
+          "title": "EXCLUSIVE: How e-methanol can drive investment in industry - Port Strategy",
+          "titleEn": "EXCLUSIVE: How e-methanol can drive investment in industry - Port Strategy",
+          "summary": "来自 绿色甲醇 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the E-methanol monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNN2xzWlYzUE8wZDlObGtTcTZJZkc4OVY0SElyNzNzbkc1MWYzMTVERXFsNmdxdld4cUIzZVdjNjRFVEl2UWdjVTFJQUswZ3NycTJvNFZ3ZlN2YVF3N1RzWV96c1c1ck51RDRoWFlDUW1tWDRUUU8xSVV2WlVodHRKM0MxMkoxTi1pTVhPempCREVudHBXMGRvb2M4eTlUSXJ5X2Z3SHJjQklXY2JIT0c2ZkNFVmoweG5xYzVEbzNfTDBoclFtdzNsckdTSzg5UQ?oc=5",
+          "publishedAt": "2026-07-21",
+          "kind": "新闻"
         }
       ]
     },
@@ -104,20 +206,48 @@
       "name": "可持续航空燃料",
       "nameEn": "Sustainable aviation fuel",
       "sources": [
-        { "name": "IATA SAF", "url": "https://www.iata.org/en/programs/sustainability/sustainable-aviation-fuel/" },
-        { "name": "ICAO Environmental Protection", "url": "https://www.icao.int/environmental-protection/Pages/default.aspx" }
+        {
+          "name": "IATA SAF",
+          "url": "https://www.iata.org/en/programs/sustainability/sustainable-aviation-fuel/"
+        },
+        {
+          "name": "ICAO Environmental Protection",
+          "url": "https://www.icao.int/environmental-protection/Pages/default.aspx"
+        }
       ],
-      "feeds": ["https://news.google.com/rss/search?q=sustainable+aviation+fuel+SAF&hl=en-US&gl=US&ceid=US:en"],
+      "feeds": [
+        "https://news.google.com/rss/search?q=sustainable+aviation+fuel+SAF&hl=en-US&gl=US&ceid=US:en"
+      ],
       "items": [
         {
-          "title": "SAF 更新应同时关注原料路线与航空需求",
-          "titleEn": "SAF updates should connect pathways with aviation demand",
-          "summary": "持续跟踪 HEFA、酒精制航煤、气化和电合成路线，以及航空公司承购与政策激励。",
-          "summaryEn": "Track HEFA, alcohol-to-jet, gasification and e-fuel pathways alongside airline offtake and policy support.",
-          "source": "IATA",
-          "url": "https://www.iata.org/en/programs/sustainability/sustainable-aviation-fuel/",
-          "publishedAt": "2026-07-01",
-          "kind": "行业"
+          "title": "Sustainable Aviation Fuels - Department of Energy (.gov)",
+          "titleEn": "Sustainable Aviation Fuels - Department of Energy (.gov)",
+          "summary": "来自 可持续航空燃料 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Sustainable aviation fuel monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBXMXBMeGRqR2xPOWNvb1FmRmM3MkRSQnNNc255dmJTNU44LW5aWEFyREhzLWRkWE5BbTZKeGdJM3Nqd2c4dXk1NHVBVk84ck1zcktXLXVLOEM0WHZZbDllY25IU1hpWko5SEhDeA?oc=5",
+          "publishedAt": "2026-07-23",
+          "kind": "新闻"
+        },
+        {
+          "title": "New sustainable aviation fuel facility in Minnesota will start producing 30 million gallons per year for MSP flights - kare11.com",
+          "titleEn": "New sustainable aviation fuel facility in Minnesota will start producing 30 million gallons per year for MSP flights - kare11.com",
+          "summary": "来自 可持续航空燃料 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Sustainable aviation fuel monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQQnVvTndiRW9BNXNaaWZZWVFBZlhwc3pWcl9OYWdZRWNSUFJfZ3RtemNuZjc2Y1lQMzlkWGtzRDhMUGlmcG9FSGJKSWRtRENNbTd5d2ZfZmdEd2FrR01iSEFNMnQteDVlczNNY0pOc1YwVDRDMGZJQkZaMUJET2lqeWIwTE1iVGZTMXNSOWRxR0JLY2lWNnpQRXktZXVIZFdCaHJVcmJld3N0MTBSaF9rTlBnbWl3dDNMQlBObGxKUDMyMEpaLWtKZk8wdEpsMlhkYXRnOTVIVHYyR0Y2RTNlWDhTMWJMd3FLVFFUT3dwenlVRUxSSkxsRjZOaHpRbWJmUkNfQUFHQktPdGRRdnBQYVU1VkZidFhJRlpPNFpfbGs?oc=5",
+          "publishedAt": "2026-07-24",
+          "kind": "新闻"
+        },
+        {
+          "title": "Sustainable Aviation Fuel Initiative - Department of Energy (.gov)",
+          "titleEn": "Sustainable Aviation Fuel Initiative - Department of Energy (.gov)",
+          "summary": "来自 可持续航空燃料 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Sustainable aviation fuel monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5kWHJfUjl2YUh1MVJXdGZYY0czNEgwb21iOG9JWGNXQXBoWWM1MEZVZ2NBZFZDUlozOTZTOUdzX1V2MnZ3VXkxSk9EMHhyTWZ1bUFpQzBXaWF0WmlaVVRqVHVlM240N0JuYnBlanFHZjhJZzg3Vm1CU2lB?oc=5",
+          "publishedAt": "2026-07-23",
+          "kind": "新闻"
         }
       ]
     },
@@ -126,20 +256,48 @@
       "name": "沼气与生物甲烷",
       "nameEn": "Biogas and biomethane",
       "sources": [
-        { "name": "IEA Biogas Outlook", "url": "https://www.iea.org/reports/outlook-for-biogas-and-biomethane" },
-        { "name": "European Biogas Association", "url": "https://www.europeanbiogas.eu/" }
+        {
+          "name": "IEA Biogas Outlook",
+          "url": "https://www.iea.org/reports/outlook-for-biogas-and-biomethane"
+        },
+        {
+          "name": "European Biogas Association",
+          "url": "https://www.europeanbiogas.eu/"
+        }
       ],
-      "feeds": ["https://news.google.com/rss/search?q=biogas+biomethane+project&hl=en-US&gl=US&ceid=US:en"],
+      "feeds": [
+        "https://news.google.com/rss/search?q=biogas+biomethane+project&hl=en-US&gl=US&ceid=US:en"
+      ],
       "items": [
         {
-          "title": "IEA 强调沼气与生物甲烷的能源和减排协同",
-          "titleEn": "IEA highlights the energy and emissions value of biogases",
-          "summary": "沼气可用于供热和发电；升级后的生物甲烷可替代天然气，并与废弃物和甲烷减排政策相连。",
-          "summaryEn": "Biogas supports heat and power; upgraded biomethane can substitute for gas and links waste management with methane reduction.",
-          "source": "IEA",
-          "url": "https://www.iea.org/reports/outlook-for-biogas-and-biomethane",
-          "publishedAt": "2025-01-01",
-          "kind": "研究"
+          "title": "India taps dairy sector as next frontier for biomethane with Assam project - gasworld",
+          "titleEn": "India taps dairy sector as next frontier for biomethane with Assam project - gasworld",
+          "summary": "来自 沼气与生物甲烷 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Biogas and biomethane monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNUXFyaHVCSlhfdHVsRVF6cjlBbU15eVN5VVlqWGFWR0NBUGRiZXVpY1dQNEE3SWhuY2EtYTZDVTg5NlJydFYySk1BYVdtWENQdnBLSHhzYUJYTXkwLXlRUFlXeThEVktKcU5WNC04QmktekxYTWduMUNpVnlvTkhVeVZoZ3BRQjNqYjdsUlgwTHg3LXNBR3ZoYVZXYldlTUNSXzRhNDVqVGplXzRiT2l0eGNFcGhhdjdLQUhLNFBPSQ?oc=5",
+          "publishedAt": "2026-07-21",
+          "kind": "新闻"
+        },
+        {
+          "title": "Scaling biomethane: The next phase of growth in renewable gas - McKinsey & Company",
+          "titleEn": "Scaling biomethane: The next phase of growth in renewable gas - McKinsey & Company",
+          "summary": "来自 沼气与生物甲烷 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Biogas and biomethane monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPdk5JWDAyUzgyZUNfaVA2T3ExRENpX3VRVjVNRkpycGFjVlFCSDBnWU5sMzZJYVdjZlhxNEdteDZwU3ljNFV1dEZ0MTMtTXpLbWx1NnVoU1dKX1E0SHFoU21zR2RlR1JmY0p6THJuWE5kQUV5STV2elFwXzNqMGNGZ2I0cHlZOElxRTJOcmF0WGZWNUNja1ZQSElrVjN5U1YtaWd3dll6Y2JjbExSWlBYZXpXUVdRNFotVXJSQ04wZ3N5bkNrcW9HWjM3Y1hCMFh5N1p4Sg?oc=5",
+          "publishedAt": "2026-05-01",
+          "kind": "新闻"
+        },
+        {
+          "title": "Poland to provide EUR 422m to back biogas, biomethane projects in 2026 - Renewables Now",
+          "titleEn": "Poland to provide EUR 422m to back biogas, biomethane projects in 2026 - Renewables Now",
+          "summary": "来自 沼气与生物甲烷 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Biogas and biomethane monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNbWsxQjZwODQyS1JHalZzOTVoRU1lY2xJcFhKc0xXT2prZHdzVjhaSUhoeW5EbjlNUXVKRGRCeU9wTTlnanV4RXNLcmpCNXJ6VF9PT2VTMC1QcGtkbHo2RGR3OG5NYVkxX1RWa3lZLTBZd1RyYU9NY05maHQ4Y3J0U053NzlnOG5qZUlWSndiNmtjbE5jQmtzaWhfY0l3SHVoZ2lDc1NWdXBTSEY0eGc?oc=5",
+          "publishedAt": "2026-04-13",
+          "kind": "新闻"
         }
       ]
     },
@@ -148,20 +306,48 @@
       "name": "全球主要股市",
       "nameEn": "Major global equities",
       "sources": [
-        { "name": "MSCI Index Resources", "url": "https://www.msci.com/indexes/index-resources" },
-        { "name": "S&P Dow Jones Indices", "url": "https://www.spglobal.com/spdji/en/" }
+        {
+          "name": "MSCI Index Resources",
+          "url": "https://www.msci.com/indexes/index-resources"
+        },
+        {
+          "name": "S&P Dow Jones Indices",
+          "url": "https://www.spglobal.com/spdji/en/"
+        }
       ],
-      "feeds": ["https://news.google.com/rss/search?q=MSCI+World+S%26P+500+markets&hl=en-US&gl=US&ceid=US:en"],
+      "feeds": [
+        "https://news.google.com/rss/search?q=MSCI+World+S%26P+500+markets&hl=en-US&gl=US&ceid=US:en"
+      ],
       "items": [
         {
-          "title": "以全球基准而非单一市场组织观察",
-          "titleEn": "Organize market observation around global benchmarks",
-          "summary": "用 MSCI ACWI/World、S&P 500、STOXX Europe 600、日经和中国主要指数建立多市场快照。",
-          "summaryEn": "Use MSCI ACWI/World, S&P 500, STOXX Europe 600, Nikkei and major China indices for a multi-market snapshot.",
-          "source": "MSCI",
-          "url": "https://www.msci.com/indexes/index-resources",
-          "publishedAt": "2026-07-01",
-          "kind": "市场"
+          "title": "Why Are Stocks at Record Highs with no Iran Resolution? - J.P. Morgan",
+          "titleEn": "Why Are Stocks at Record Highs with no Iran Resolution? - J.P. Morgan",
+          "summary": "来自 全球主要股市 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Major global equities monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNQ3o0YTF6TDN4XzFLLXRCOFFJelJRWjBiY1dRV0hiZXI3NUdnVm5zcVRibDNrODd2UjFLTDhieExrVFZaUE1rUWdYZlZjVU1wbW40ZENodDQ2cGtkNkVZZ3Y0VGptRXlJOW9zWW5RcVFfNDN1SmlpZ2hfTFVDUmh5RmJ2MUN1a2pSdHVmanZLaHVuQ3BQQzB0eVZyMkZlWEx1UE5GY3h5bkdDV2U3SzFhS1hPTEh6OVJhTXQ4TU9hbURLTHR4blJ6YXFUYi02Zw?oc=5",
+          "publishedAt": "2026-04-24",
+          "kind": "新闻"
+        },
+        {
+          "title": "Exploring Investors’ Concerns About Equity Market Concentration - Goldman Sachs Asset Management",
+          "titleEn": "Exploring Investors’ Concerns About Equity Market Concentration - Goldman Sachs Asset Management",
+          "summary": "来自 全球主要股市 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Major global equities monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQYjIxdm0wQkpDTERhMngwNnhTNk9POGgxN2FhZ01vYzJfWDE1VWxEY0t2blBoeEl0cWZZT2hvclpTdE9MU3NBbnAycDV0VGxmTEZmS2FFV1pDUTJKRUpsZTAzM2NBYTJrYlpmV0VYaThUeFB3ZW0zMVFKLWlpRXFOSktrUThmdDJUb1FyMm1Zck1FR2djT3hYODlfb2NvaS16dnprNS1SUDRIcGIyeklyZjdxLVdLVTdE?oc=5",
+          "publishedAt": "2026-05-06",
+          "kind": "新闻"
+        },
+        {
+          "title": "Why the S&P 500 had its best month in over 5 years despite Middle East uncertainty - Chase Bank",
+          "titleEn": "Why the S&P 500 had its best month in over 5 years despite Middle East uncertainty - Chase Bank",
+          "summary": "来自 全球主要股市 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Major global equities monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZ0V4WHY2Mm9HbnpKUFFLc0dTVVZYb3ZGNUdjcmdac21WeG9BLS1iYU1TRzdZVXBacDlkenYxY0lhN3QyaFFlaUlxZVk2bHZzTmdlOGkwcGhYRno5cmtNWm9jRXZKbTZNTnFJaW50THZfMGlQQTMxV2RZaDIxYU9yaUliS1lKeFNxLUFtcVpwSDRZREViZWlJWmRVVDRZMldXbjh3ekJhcEt4STNBRldBRm55T2cxbjl1NTI3X3JqNmJLUQ?oc=5",
+          "publishedAt": "2026-05-06",
+          "kind": "新闻"
         }
       ]
     },
@@ -170,20 +356,48 @@
       "name": "碳排放交易",
       "nameEn": "Carbon markets",
       "sources": [
-        { "name": "World Bank Carbon Pricing Dashboard", "url": "https://carbonpricingdashboard.worldbank.org/" },
-        { "name": "ICAP ETS Map", "url": "https://icapcarbonaction.com/en/ets" }
+        {
+          "name": "World Bank Carbon Pricing Dashboard",
+          "url": "https://carbonpricingdashboard.worldbank.org/"
+        },
+        {
+          "name": "ICAP ETS Map",
+          "url": "https://icapcarbonaction.com/en/ets"
+        }
       ],
-      "feeds": ["https://news.google.com/rss/search?q=carbon+market+EU+ETS+emissions+trading&hl=en-US&gl=US&ceid=US:en"],
+      "feeds": [
+        "https://news.google.com/rss/search?q=carbon+market+EU+ETS+emissions+trading&hl=en-US&gl=US&ceid=US:en"
+      ],
       "items": [
         {
-          "title": "世界银行仪表板汇总全球碳定价制度",
-          "titleEn": "World Bank dashboard maps global carbon pricing",
-          "summary": "该仪表板覆盖碳税、排放交易体系与抵消机制，可按司法辖区查看价格、覆盖范围和制度状态。",
-          "summaryEn": "The dashboard covers taxes, emissions trading and crediting, with jurisdiction-level price, coverage and status data.",
-          "source": "World Bank",
-          "url": "https://carbonpricingdashboard.worldbank.org/",
-          "publishedAt": "2026-05-01",
-          "kind": "数据"
+          "title": "Q&A: What the EU’s carbon market review means for climate action - Carbon Brief",
+          "titleEn": "Q&A: What the EU’s carbon market review means for climate action - Carbon Brief",
+          "summary": "来自 碳排放交易 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Carbon markets monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTTlrYVFHN2lRTHNldmpfNFRRQzdESllFcDlkSm1ucnRJUjZBZkh1WWgyRkVjOTBtVnpwU2JyUndBV2ZqNXQtN1Y5bE14T0NKOXBZZk5oQ0QxNmlBa0pqMC1LQkk4TGNoVF85enN0eV9Hc3AxdlBHNzluYzFOTEpxQVYtS2RkR3NoX2RpenlsUjBQa3c?oc=5",
+          "publishedAt": "2026-07-20",
+          "kind": "新闻"
+        },
+        {
+          "title": "International carbon trading: a strategic lever to boost global decarbonisation - Bruegel",
+          "titleEn": "International carbon trading: a strategic lever to boost global decarbonisation - Bruegel",
+          "summary": "来自 碳排放交易 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Carbon markets monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPdm11bE5FMVpMX0RIZlpqWlRpck41QTdoZHNTNmFUUkw2a2o4cTd1ZTQ2dGs5MkJDakVKeVc3Z2d0LU8xdW4tYTA5Qy1xSTVCOVJwU0g4a0RkM1ZaY2JsN1ZQbE9CRGE5Q0ppaXRiMTlnd0U0S1hwUXRiemFmTTZYUkl3RlBTT2tuUnhqc1dQcVF6LU9hZ0xNWDFTc0IxbUN2QzQ5aUtGT2dIOHA0MWsw?oc=5",
+          "publishedAt": "2026-07-23",
+          "kind": "新闻"
+        },
+        {
+          "title": "Q&A: What will the future of EU emissions trading look like? - Clean Energy Wire",
+          "titleEn": "Q&A: What will the future of EU emissions trading look like? - Clean Energy Wire",
+          "summary": "来自 碳排放交易 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Carbon markets monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxON2FSTTFLN3hzaGR3ZmJtOFhqQWhJTHZrRXE3MTM2RzFMR0ZHdHlFY0VUNG55c3ktVElxSE54UklKMVVVQXlQOXJUT1FUOVk4aGFkam5tNVNmZWpSZzlfVm1zRDNTWjc4N0Y2dmZfLUt5dVRLalRrMmlMNlMzbWtONDEtZEtvT29jaFhyVGtpM01TZw?oc=5",
+          "publishedAt": "2026-07-20",
+          "kind": "新闻"
         }
       ]
     },
@@ -192,20 +406,48 @@
       "name": "风景与文化景观",
       "nameEn": "Scenery and cultural landscapes",
       "sources": [
-        { "name": "UNESCO World Heritage", "url": "https://whc.unesco.org/" },
-        { "name": "Google Arts & Culture", "url": "https://artsandculture.google.com/project/explore-world-heritage/nature" }
+        {
+          "name": "UNESCO World Heritage",
+          "url": "https://whc.unesco.org/"
+        },
+        {
+          "name": "Google Arts & Culture",
+          "url": "https://artsandculture.google.com/project/explore-world-heritage/nature"
+        }
       ],
-      "feeds": ["https://news.google.com/rss/search?q=UNESCO+World+Heritage+landscape&hl=en-US&gl=US&ceid=US:en"],
+      "feeds": [
+        "https://news.google.com/rss/search?q=UNESCO+World+Heritage+landscape&hl=en-US&gl=US&ceid=US:en"
+      ],
       "items": [
         {
-          "title": "以世界遗产与地方官方信息建立风景档案",
-          "titleEn": "Build scenery archives from World Heritage and official local sources",
-          "summary": "文化景观的记录同时连接自然地貌、历史文化、保护规则和可持续旅行信息。",
-          "summaryEn": "Cultural-landscape records connect natural features, history, protection rules and sustainable-travel context.",
-          "source": "UNESCO World Heritage Centre",
-          "url": "https://whc.unesco.org/en/culturallandscape/",
-          "publishedAt": "2026-07-01",
-          "kind": "文化"
+          "title": "Facing major threats, six new sites join UNESCO’s List of World - UNESCO",
+          "titleEn": "Facing major threats, six new sites join UNESCO’s List of World - UNESCO",
+          "summary": "来自 风景与文化景观 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Scenery and cultural landscapes monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPNnROa3R5dmRkZXhzdENLSGJXUjF1SnA0V3Jyby1ld1Uyb04yWDk1VGRmY2hTdmMzTU50bmJ5WGVKdUk3eGdFdzdzNXJPb21nT1ZGWS1NaUowX1piVTVfZF9LZ2F4SHVJSlpfS2hFWHdOZzlHY3FMSXpKWUhlTm5xeDJRd2oyNEpKaGszb0lzSFFCMXlKd3JNUThqNm1lWnpKQktjR3JzX3ZGTkFObjFwWFl3d1ZaMWtmaVFJaUtvUVJjb1hwaWVNVGlB?oc=5",
+          "publishedAt": "2026-07-26",
+          "kind": "新闻"
+        },
+        {
+          "title": "UNESCO announces changes to World Heritage List for 2026 - Newsweek",
+          "titleEn": "UNESCO announces changes to World Heritage List for 2026 - Newsweek",
+          "summary": "来自 风景与文化景观 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Scenery and cultural landscapes monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPdzlXVzU0Zm92bUhZcXVXaXktVlhfczhwZXI3ODlKMGZ5UEZhQzQxU2EzLTh2VzFULU9HNjNkZHVaUlVHV1o2Q00tR0dJeUFYVnJGamRJVGgwbmdQRUw2a3RXTlhvNDV1bmNYdXNNZmZsSXlQQTlNMDJjZjdxZjVhbjlwdXBlRHlpdHlRZ0wxajlpUkFwNzBUdGRUbTY?oc=5",
+          "publishedAt": "2026-07-26",
+          "kind": "新闻"
+        },
+        {
+          "title": "Boma–Badingilo Migratory Landscape becomes South Sudan's first UNESCO World Heritage Site - Radio Tamazuj",
+          "titleEn": "Boma–Badingilo Migratory Landscape becomes South Sudan's first UNESCO World Heritage Site - Radio Tamazuj",
+          "summary": "来自 风景与文化景观 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Scenery and cultural landscapes monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQQjFWbzhNNmdjYm1RaXdnUFBhUjdFY0F5bWY5X0JKYnlBSlhrY0otSnJMWE15SUpMNzQwUHcycFc1S0dfQUN6dS1DT25HaVNpYUlaYnVtbEZOeURsSXZvZ1g1REZWeWl5T1o3aDlxNXhncWZSM2NfM3pGMEZ5Q2NlWVlCWFkxVUYxWlhxWlVsVEl3LW5CNkNWTzFyalh2NXFMa19PSDVJVmpzeDM3cU80S1dBVUREVFdtc1ByXzgtZWw1c0w2RjNNdzRDTFNlQQ?oc=5",
+          "publishedAt": "2026-07-26",
+          "kind": "新闻"
         }
       ]
     }
