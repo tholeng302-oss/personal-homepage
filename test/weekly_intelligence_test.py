@@ -36,14 +36,14 @@ class WeeklyIntelligenceTest(unittest.TestCase):
             )
 
     def test_page_has_focus_area_mount_and_data_loader(self):
-        html = Path("index.html").read_text()
+        html = Path("intelligence.html").read_text()
         script = Path("script.js").read_text()
 
-        self.assertIn('id="weekly-intelligence"', html)
+        self.assertIn('id="intel-live-briefs"', html)
         self.assertIn('fetch("data/weekly-intelligence.json")', script)
 
     def test_special_focus_and_intelligence_mounts_exist(self):
-        html = Path("index.html").read_text()
+        html = Path("intelligence.html").read_text()
         script = Path("script.js").read_text()
 
         self.assertIn('id="intel-live-briefs"', html)
