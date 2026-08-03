@@ -163,7 +163,7 @@ const siteContent = {
           sourceLabel: "伊吾县政府",
           sourceUrl: "https://www.xjyiwu.gov.cn/xjyiwu/c119597/zjyw.shtml",
           fragment:
-            "淖毛湖所在区域既有荒漠气候条件，也承接了新能源项目布局。光热与光伏场景在这里并不抽象，而是可以直接被看见的地景。"
+            "新疆之行去哈密煤化工园区时，途径中国能建的光热发电项目。采用的是光热熔盐蓄热发电技术，可以看到聚光塔上明亮的白炽！"
         }
       ]
     },
@@ -195,7 +195,7 @@ const siteContent = {
         id: "green-fuels",
         title: "绿色燃料周报",
         cadence: "每周",
-        scope: "全球绿色甲醇、SAF、绿色氨、绿色化工燃料项目与交易动态。",
+        scope: "全球绿色甲醇、SAF、绿色氨、绿色化工燃料项目与交易动态",
         mode: "自动抓取 + 人工复核",
         status: "阶段汇总中"
       },
@@ -203,7 +203,7 @@ const siteContent = {
         id: "hydrogen-biogas",
         title: "氢能与沼气月度观察",
         cadence: "每月",
-        scope: "氢能基础设施、沼气/填埋气项目、政策变化、设备与价格信号。",
+        scope: "氢能基础设施、沼气/填埋气项目、政策变化、设备与价格信号",
         mode: "多源聚合 + 主题归档",
         status: "持续更新"
       },
@@ -211,7 +211,7 @@ const siteContent = {
         id: "markets-carbon",
         title: "股市与碳交易观察",
         cadence: "每日/每周",
-        scope: "重点股票、碳市场价格、行业情绪、政策事件与价值线索。",
+        scope: "重点股票、碳市场价格、行业情绪、政策事件与价值线索",
         mode: "市场快照 + 长线笔记",
         status: "自动阶段收集中"
       },
@@ -219,7 +219,7 @@ const siteContent = {
         id: "global-resource-directory",
         title: "全球信息资源调度台",
         cadence: "按计划运行",
-        scope: "媒体、官方机构、研究报告、项目公告、交易所信息与数据库。",
+        scope: "媒体、官方机构、研究报告、项目公告、交易所信息与数据库",
         mode: "来源分级 + 节奏汇总",
         status: "待接入真实自动化"
       }
@@ -642,6 +642,28 @@ function formatUpdateDate(value, locale) {
   }).format(date);
 }
 
+function renderFrameworkScenery(data, locale) {
+  const container = document.getElementById("framework-scenery-desk");
+  if (!container) return;
+
+  const scenery = data?.topics?.find((topic) => topic.id === "scenery");
+  const photos = siteContent[locale].publicMemory.photos.slice(0, 3);
+
+  if (!scenery) {
+    container.innerHTML = `<p class="framework-scenery-empty">${locale === "zh" ? "风景与文化信息正在汇总" : "Scenery and culture updates are being collected"}</p>`;
+    return;
+  }
+
+  container.innerHTML = `
+    <div class="framework-scenery-photos">
+      ${photos.map((photo) => `<figure><img src="${escapeHtml(photo.image)}" alt="${escapeHtml(photo.alt)}"><figcaption>${escapeHtml(photo.title)}</figcaption></figure>`).join("")}
+    </div>
+    <div class="framework-scenery-items">
+      ${scenery.items.slice(0, 3).map((item) => `<article class="focus-item"><span class="tag">${escapeHtml(item.kind)}</span><h3>${escapeHtml(locale === "zh" ? item.title : item.titleEn)}</h3><p>${escapeHtml(locale === "zh" ? item.summary : item.summaryEn)}</p><span class="focus-item-meta">${escapeHtml(item.source)} · ${escapeHtml(item.publishedAt)}</span></article>`).join("")}
+    </div>
+  `;
+}
+
 function renderWeeklyIntelligence() {
   const data = state.weeklyIntelligence;
   const locale = state.locale;
@@ -660,6 +682,7 @@ function renderWeeklyIntelligence() {
     if (weekly) weekly.innerHTML = "";
     if (liveBriefs) liveBriefs.innerHTML = "";
     if (resourceDirectory) resourceDirectory.innerHTML = "";
+    renderFrameworkScenery(null, locale);
     return;
   }
 
@@ -742,6 +765,8 @@ function renderWeeklyIntelligence() {
       </div>
     `;
   }
+
+  renderFrameworkScenery(data, locale);
 }
 
 async function loadWeeklyIntelligence() {
