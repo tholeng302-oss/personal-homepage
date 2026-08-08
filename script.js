@@ -164,6 +164,26 @@ const siteContent = {
           sourceUrl: "https://www.xjyiwu.gov.cn/xjyiwu/c119597/zjyw.shtml",
           fragment:
             "新疆之行去哈密煤化工园区时，途径中国能建的光热发电项目。采用的是光热熔盐蓄热发电技术，可以看到聚光塔上明亮的白炽！"
+        },
+        {
+          id: "fengxian-tea-chant",
+          title: "《奉贤茶吟》",
+          location: "中国上海奉贤",
+          time: "2026-08",
+          timeGroup: "2026-08-fengxian",
+          timeGroupLabel: "2026年8月 · 奉贤",
+          timeEntryLabel: "8月",
+          image: "assets/fengxian-tea-chant.jpg",
+          alt: "上海奉贤农田河边的两层环形圈屋、草地与庭院灯",
+          description: "上海奉贤的一片农田之中，小河边上一座两层环形圈屋，中央敞向天际的是一汪圆形鱼池，锦鲤在水中游弋……",
+          mapXChina: 52,
+          mapYChina: 57,
+          mapXWorld: 77,
+          mapYWorld: 48,
+          sourceLabel: "公开相册",
+          sourceUrl: "#photo-fengxian-tea-chant",
+          fragment:
+            "上海奉贤的一片农田之中，小河边上一座两层环形圈屋，中央敞向天际的是一汪圆形鱼池，锦鲤在水中游弋……"
         }
       ]
     },
@@ -428,6 +448,26 @@ const siteContent = {
           sourceUrl: "https://www.xjyiwu.gov.cn/xjyiwu/c119597/zjyw.shtml",
           fragment:
             "Naomaohu's arid climate and open land make it a visible landscape of the energy transition, where renewable infrastructure becomes part of the terrain itself."
+        },
+        {
+          id: "fengxian-tea-chant",
+          title: "Fengxian Tea Chant",
+          location: "Fengxian, Shanghai, China",
+          time: "2026-08",
+          timeGroup: "2026-08-fengxian",
+          timeGroupLabel: "August 2026 · Fengxian",
+          timeEntryLabel: "August",
+          image: "assets/fengxian-tea-chant.jpg",
+          alt: "A two-storey circular house, lawn, and garden lantern beside farmland in Fengxian, Shanghai",
+          description: "Among the farmland of Fengxian, Shanghai, a two-storey circular house stands beside a small river. At its open centre, a round fishpond meets the sky while koi drift through the water…",
+          mapXChina: 52,
+          mapYChina: 57,
+          mapXWorld: 77,
+          mapYWorld: 48,
+          sourceLabel: "Public album",
+          sourceUrl: "#photo-fengxian-tea-chant",
+          fragment:
+            "Among the farmland of Fengxian, Shanghai, a two-storey circular house stands beside a small river. At its open centre, a round fishpond meets the sky while koi drift through the water…"
         }
       ]
     },
