@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T03:04:59.861Z",
+  "updatedAt": "2026-08-17T02:11:59.153Z",
   "topics": [
     {
       "id": "ai",
@@ -30,16 +30,6 @@
           "kind": "新闻"
         },
         {
-          "title": "Editorial: Research ethics and integrity in the artificial intelligence era - Frontiers",
-          "titleEn": "Editorial: Research ethics and integrity in the artificial intelligence era - Frontiers",
-          "summary": "来自 人工智能 监测网络的本周更新，请访问原文了解详情。",
-          "summaryEn": "This week’s update from the Artificial intelligence monitoring network. Open the source for full details.",
-          "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcDdkZTZseUZoQzEyTDdwREd4LWp0anFrTmZad3JaWVZ4OUQwZlBZZ3F2OHZkQzFES3Q4SzVZN3FfUXhiWHc3S1UtRjB3bEFKSlNrYzE3aVptY1ExWkdnaTd4VDB2YnNFZ2c2dXlQS1pSRk15bXNQakE0ODZyVzYzOTdQZXl2SzBQQkRtQmx4am95S1ppNEtPc2hHNzlCTGF1d0ZuWXJ3U2M0bGc?oc=5",
-          "publishedAt": "2026-07-22",
-          "kind": "新闻"
-        },
-        {
           "title": "THE WEEK OF JULY 27, 2026 - AIP.ORG",
           "titleEn": "THE WEEK OF JULY 27, 2026 - AIP.ORG",
           "summary": "来自 人工智能 监测网络的本周更新，请访问原文了解详情。",
@@ -47,6 +37,16 @@
           "source": "Google News RSS",
           "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5ER0trdjl2dmpwNWVzS1pJWEw0a05BcDdHT01pTDJRSXgxeW1FNWNOQ09CWnB2R0hQRjVaUXEtUGJPc2JqeUNVWFZicjl1aXVjUk5COEpiR0ZZQVlCeVRfVHVnMWJuOWQ4dWtLZXBmLXNtN1NfQ3c?oc=5",
           "publishedAt": "2026-07-27",
+          "kind": "新闻"
+        },
+        {
+          "title": "Editorial: Research ethics and integrity in the artificial intelligence era - Frontiers",
+          "titleEn": "Editorial: Research ethics and integrity in the artificial intelligence era - Frontiers",
+          "summary": "来自 人工智能 监测网络的本周更新，请访问原文了解详情。",
+          "summaryEn": "This week’s update from the Artificial intelligence monitoring network. Open the source for full details.",
+          "source": "Google News RSS",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcDdkZTZseUZoQzEyTDdwREd4LWp0anFrTmZad3JaWVZ4OUQwZlBZZ3F2OHZkQzFES3Q4SzVZN3FfUXhiWHc3S1UtRjB3bEFKSlNrYzE3aVptY1ExWkdnaTd4VDB2YnNFZ2c2dXlQS1pSRk15bXNQakE0ODZyVzYzOTdQZXl2SzBQQkRtQmx4am95S1ppNEtPc2hHNzlCTGF1d0ZuWXJ3U2M0bGc?oc=5",
+          "publishedAt": "2026-07-22",
           "kind": "新闻"
         }
       ]
@@ -76,27 +76,27 @@
           "summaryEn": "This week’s update from the Clean hydrogen monitoring network. Open the source for full details.",
           "source": "Google News RSS",
           "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB6TDE4WkZVbk1kOGVENDNwSHFkb3d1aFFJSzhqNko0b1dKQlgxcm4xLTYtVmUtQ0UteEVIdEpHYnNLdlZjUDJJbEFFeGQ4UVF3VGRPV1ZQWFJIdjVJeTVwSGFGcFAxOGF5SGJ5X3lLQXFWcldjbGRNTg?oc=5",
-          "publishedAt": "2026-08-07",
+          "publishedAt": "2026-08-14",
           "kind": "新闻"
         },
         {
-          "title": "Site secured for 60MW US deuterium and green hydrogen project - gasworld",
-          "titleEn": "Site secured for 60MW US deuterium and green hydrogen project - gasworld",
+          "title": "South Korea Plans 320MW Green Hydrogen Project at Saemangeum - Fuel Cells Works",
+          "titleEn": "South Korea Plans 320MW Green Hydrogen Project at Saemangeum - Fuel Cells Works",
           "summary": "来自 绿色氢能 监测网络的本周更新，请访问原文了解详情。",
           "summaryEn": "This week’s update from the Clean hydrogen monitoring network. Open the source for full details.",
           "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQZG1OVW45aGZFYWU1WF9pUm9qN3NqV0J2RThFaC1TLXdIdkdwSUNHZ1Jad0FsdXVHNDFIZEJLM1VYZWNjVkp6WkVOXzRoTUlTQXFKZTdON1Zpa0YzWS1iWVo1czdmVGlMWE1JbVllVXlETHNKWWtocU9sVDNiZ3BUdmlIbnMwZEJVWGRoRXVyV3RXdktoVGlfNXJkSGVfTDhfZ3RYdnZ0QXh6Z0x2RlE?oc=5",
-          "publishedAt": "2026-08-05",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNZEhQWERNcnZSN2JJa3AtR3F4QUc3bW1zZ1Rob3Zyd0JsUTA4djNMbzhhNFFhbm1fMy1DVHRvZk1odFVDczI4TXNJSG5pSHFsMmNZWktlem50cjE3a2xuTFBvcC1pV2ZocDVhY2pJdVFGVEFlTWtkS08zY280UUhqTDZMSGlvTV83RDhaMWI5dHYteGRhMU1jMWxJekVKZUU0QkJMektNRXFIWWIwWHZDNA?oc=5",
+          "publishedAt": "2026-08-14",
           "kind": "新闻"
         },
         {
-          "title": "Just a few projects are driving a small bump in hydrogen investment - Latitude Media",
-          "titleEn": "Just a few projects are driving a small bump in hydrogen investment - Latitude Media",
+          "title": "Air Products cancels blue hydrogen project in Louisiana - cen.acs.org",
+          "titleEn": "Air Products cancels blue hydrogen project in Louisiana - cen.acs.org",
           "summary": "来自 绿色氢能 监测网络的本周更新，请访问原文了解详情。",
           "summaryEn": "This week’s update from the Clean hydrogen monitoring network. Open the source for full details.",
           "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQRGZicUlXSzZhclc0YUxaaDJkX2wwUmkxVTJIWThWd0NldXlrZld3akdfTG5tZmxfRk95OVo5YTZmQXQzemV0aGtkMmZiZXFWZDRTa2VlMGRmMWhJRGs4UjQ1dWtrYlpXMUpCWkl1blctOGFCZFAtMjc3TExNeDBUOUZjZjR3X1JKUEs2WHdONzI5UTR5aEdXMEdjdnVtSkVCa0RXSHBn?oc=5",
-          "publishedAt": "2026-05-20",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOYlZIOTRneGtQLW43emNjNEpucV9PcWZaRWtNYlJOLS1tQnhaUnFUMFZKS1h6cWZOdU1FenBpQUtpTDl1THFYZnNiNlBHY21hYlMzdG15MU95dGMyR0d2NzQ5WWFTZlB5YVNiLW15bEtrR1FaTG92Ni1EdXltSlpKVUtPWm9CdXhiU0pkcG5KZ1JnSlBaRHVZ?oc=5",
+          "publishedAt": "2026-07-01",
           "kind": "新闻"
         }
       ]
@@ -120,33 +120,33 @@
       ],
       "items": [
         {
-          "title": "U.S. backs Morocco's $4.5 billion green ammonia project in disputed Western Sahara - Business Insider Africa",
-          "titleEn": "U.S. backs Morocco's $4.5 billion green ammonia project in disputed Western Sahara - Business Insider Africa",
+          "title": "Climate Fund Managers Reaches ZAR 3 Billion First Close For SA-H2 Green Hydrogen Fund, Targets ZAR 12 Billion - Pulse 2.0",
+          "titleEn": "Climate Fund Managers Reaches ZAR 3 Billion First Close For SA-H2 Green Hydrogen Fund, Targets ZAR 12 Billion - Pulse 2.0",
           "summary": "来自 绿氨 监测网络的本周更新，请访问原文了解详情。",
           "summaryEn": "This week’s update from the Green ammonia monitoring network. Open the source for full details.",
           "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPY2NTam54ZWpFRGRvakN4MmVkd0ROeW5HeGVqZzY0clhzWERfbzZzcXZQZ3Jad201NE1jNUdrMDI3QVdjaUpJZEQtZHlNTF9jR1VDZDVqOU4taEF2Vm5vZV9mRHg5ZDF2QzlWX2Z5dm9Od2V1RWNTQzF1VUF6ZWJQUE1KSGRCd2hOU3A3c0F3elhiYnZGVTRQOWoyZ2VnU3B1b2dsTGxSQmJLMXRadEhDQlNQMDZoVEVDOXBQU2lsNkxsNGpxeHMxcWFvc1B1NUJreXVVOW1acw?oc=5",
-          "publishedAt": "2026-07-28",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWG1vSDdMTkpLWW4yMG05S3ZuTktXTEdaeUhtVTJacmhlZlA1LUowcGExN0RNMHZtYVFZVzlXMVlpVm44aW9tbjlNQkFJZUlhOHRvVU9iT0xGQmhOb0dyNnpyVkJKaENfMURQbjl3eVdMeG9CYTF1cFhFcUc3LUxKOVFZZXBVZ0ZzVkhRSm96TnFrMXQ0UTZUbmZRQkdtcE8wU0JZbFZGRzZ4NlBrZktsV2JKSkJ0Wi1YMVMxODh5U2NWa2ExQ1hn0gHMAUFVX3lxTE9aWTVOcjlpN21Jd0pvVGJoaEhVMEtoT3J1cFFVS0pYSUV3RjBGbTRYWnpPT2QyeHBVRWY3Y0VCLXpQalI0NVdVbGdnSXp0WVhRSVhnZWVnQ3dlbVZrVmdGbmJQZGZMWTIzR3VpSWQyMnBIbDdtTFA5QU93bFFPLUhUTUg3NVJ0ZTRmaE1ybHV0NWJOcEZkb043Tk1HZ1IwalNfMUtZUlpNUl81Tm90bzVkVFplNHQ5TkIzcGFydWpoRERPUWNWUWs0NTZlVA?oc=5",
+          "publishedAt": "2026-08-16",
           "kind": "新闻"
         },
         {
-          "title": "Jakson Green Gopalpur Green Ammonia RFNBO Certification - fuelcellsworks.com",
-          "titleEn": "Jakson Green Gopalpur Green Ammonia RFNBO Certification - fuelcellsworks.com",
+          "title": "Topsoe to provide ammonia technology for First Ammonia’s green ammonia project in Texas - Hydrocarbon Processing",
+          "titleEn": "Topsoe to provide ammonia technology for First Ammonia’s green ammonia project in Texas - Hydrocarbon Processing",
           "summary": "来自 绿氨 监测网络的本周更新，请访问原文了解详情。",
           "summaryEn": "This week’s update from the Green ammonia monitoring network. Open the source for full details.",
           "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNenlERWJ0dUt0dnQwVS1Ob0RhSnlVeHlyVlNnVE5QdUZoMjdRTzRBbEFWTGFLdEVaMmt0eXR4MkFGd3EzbHUwRlVGaW9SSWRGMTFDUmJtaDRWaEllLW1nZl9yZTVXNzhIZ2hCdXphQTJfNFpMWlVuV2pySktNWVNla2xrNk1FNWtqWGRRc3gzdmNhdmlYemVKcWgzLU5oSWRpQWoyLXgyU0x1VndNbU1uVHBlQjdLdndaY01YTDI0NGt1QW9FbzNnSWxTR2Qzb21UZVVvUVlNN0RnMjRTOFc2QndR?oc=5",
-          "publishedAt": "2026-08-04",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQekdjZzdfcWdIUGNSaDFDMzZBc0RHODNnVHIzQzBNVXJ0MEJMYzZQRE5vdWdKdkVMUVlXMXF5a0tkTUZaRndzSnRETWpPaExYZnByX1hWbDhialJ6Skl1Q0N3aFYtWV9ZRXdJQmNzWE9jaWxOUFNjVmJNSDFKWjBIbXRoMkNTOVdndV9qRXpaWm5GWV9rV2JIM0oyUDFwMlVjeW9qQkhlT01OV1dPSGh6VThnejF5NTZmd3hMck9hQldMU1dGQ254Y1NxWVJrNlFJbGVsbEF3?oc=5",
+          "publishedAt": "2026-08-11",
           "kind": "新闻"
         },
         {
-          "title": "Green ammonia project aims to keep fertilizer dollars in Minnesota - University of Minnesota Twin Cities",
-          "titleEn": "Green ammonia project aims to keep fertilizer dollars in Minnesota - University of Minnesota Twin Cities",
+          "title": "600 tons per day: World`s largest green hydrogen facility nears commissioning - Interesting Engineering",
+          "titleEn": "600 tons per day: World`s largest green hydrogen facility nears commissioning - Interesting Engineering",
           "summary": "来自 绿氨 监测网络的本周更新，请访问原文了解详情。",
           "summaryEn": "This week’s update from the Green ammonia monitoring network. Open the source for full details.",
           "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOU3Q4OGREendBWS1aQXAzZldkdjIwZklNSlZmRUpEMk91U3RielczeXprb3NPR29SeXF0dGFndjl3SDU5SlZCMGQ4NHBDUjdQTTRjQVdUaEQ5bWZJR2lHM0hTOFp6YXB0RE1KbUJBT0hpVENlcUJEZFRranpIbktjNzBUYmJnZHowLWJPRU1nNzlEbURnSFZKNE1lS0RUQ3NNUlE?oc=5",
-          "publishedAt": "2026-06-26",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZGRMbHprTE5pQ2F4SGhvVGdGb2M1cU1VSC1pbzlfOXNaUG9yMk4tVUtuQnZwMGRSV0Q1MXdWQjVCMXZCc2lTdFhuYzdINWhnUEVqZHBjTF9UcEFWSW14Tnp1dXFJenZFT25USGFRM2ZXNHlHRUdIZ2ZNcFZJY3FzTW5pNGF5anNGWjM2Yjdn?oc=5",
+          "publishedAt": "2026-08-12",
           "kind": "新闻"
         }
       ]
@@ -176,7 +176,7 @@
           "summaryEn": "This week’s update from the E-methanol monitoring network. Open the source for full details.",
           "source": "Google News RSS",
           "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQQWNhQjNHLUhkY3JGSzJvbXZTbzF3QjJPQnlyellQMHRBUGxFbjhCeFg1WmRXbEw3SFp4TDM5elVwVl9ETUtLR1d0aFdZclBXM0NveU45MmlaaXE3Yk12c1FucEltOWtNTlhYdHhkTG5jdTRFLWk0T2cwVmY3aFBVbVYtUFdSZDNsb3Jvby05RXV6Q0RhQ051X25zQnkydVlWY3g0eUdaX0E5eEpwU25BOFdJcDdsX3dqZXdn?oc=5",
-          "publishedAt": "2026-08-04",
+          "publishedAt": "2026-08-14",
           "kind": "新闻"
         },
         {
@@ -186,17 +186,17 @@
           "summaryEn": "This week’s update from the E-methanol monitoring network. Open the source for full details.",
           "source": "Google News RSS",
           "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBUdDRXamF0SlJwTnJIY2trOWUtTXZqeEFNcDlPLVhyd3lDWF82aWZ2RWN0M1JVWkE1MWNSUHRzQUJPUE5GbTlIcHRmeFBZVmYwN0JWTDl4QVRMcllDR0tXT2xpQ1hpSGlaWW82aEZzd05FZw?oc=5",
-          "publishedAt": "2026-07-20",
+          "publishedAt": "2026-07-27",
           "kind": "新闻"
         },
         {
-          "title": "Sasol commissions Envision Energy to study green hydrogen project for e-methanol, eSAF production - BioEnergy Times",
-          "titleEn": "Sasol commissions Envision Energy to study green hydrogen project for e-methanol, eSAF production - BioEnergy Times",
+          "title": "Ørsted Cancels e-Methanol Plant Construction - Industrial Info Resources",
+          "titleEn": "Ørsted Cancels e-Methanol Plant Construction - Industrial Info Resources",
           "summary": "来自 绿色甲醇 监测网络的本周更新，请访问原文了解详情。",
           "summaryEn": "This week’s update from the E-methanol monitoring network. Open the source for full details.",
           "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONTRzTkZEWHUxcHpvb1pvWmpQbjc0TEg3UWlmcHZWMFRha2Nmdk13VjJDNHFiYWJJT09lS1pkSjhtV0JKUHNGc1hlS01LNFdWWEN1cW1HWHU5WFA3Y0xOYktOX0NZbF9SLUlkcmJsRmRqdDlWdDl4SzIwQVFVUWJoRTBBb2tSNTU2UVZjOHZOVmtQbFJIUlNzT3R3SkJMSW9reGNoLUZuTFJUblJGYW1mRmdfNmRzVndyVlQ5eW5tY0dmUQ?oc=5",
-          "publishedAt": "2026-08-05",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdFpIc2IyS2hXUlhWN09wRkpQakFadFN6RGRHOXYxN3BRVHlCZExhT1BzRkdXX3l0NU5EU1RLaGlBbjJuN2twaS12TndtTnlVRktjQmNVelpHenFSUFdIV0t5QnVKWlFaaF9hTmJkUjQ5QTQ1Slk0ajNicnZaNEltLXZmcXBta1dwc1VPbUNucVdNZ0JETXZ4YjZhYThNb29tMEY3dEY5ZWJmajZsNkVjYXc5LTg?oc=5",
+          "publishedAt": "2026-04-09",
           "kind": "新闻"
         }
       ]
@@ -226,27 +226,27 @@
           "summaryEn": "This week’s update from the Sustainable aviation fuel monitoring network. Open the source for full details.",
           "source": "Google News RSS",
           "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBXMXBMeGRqR2xPOWNvb1FmRmM3MkRSQnNNc255dmJTNU44LW5aWEFyREhzLWRkWE5BbTZKeGdJM3Nqd2c4dXk1NHVBVk84ck1zcktXLXVLOEM0WHZZbDllY25IU1hpWko5SEhDeA?oc=5",
-          "publishedAt": "2026-08-07",
+          "publishedAt": "2026-08-14",
           "kind": "新闻"
         },
         {
-          "title": "Sustainable Aviation Fuel Initiative - Department of Energy (.gov)",
-          "titleEn": "Sustainable Aviation Fuel Initiative - Department of Energy (.gov)",
+          "title": "Opportunities & Strategies in the Sustainable Aviation Fuel (SAF) Market 2026-2031: Anticipated to Witness a Massive 45% CAGR - Yahoo Finance",
+          "titleEn": "Opportunities & Strategies in the Sustainable Aviation Fuel (SAF) Market 2026-2031: Anticipated to Witness a Massive 45% CAGR - Yahoo Finance",
           "summary": "来自 可持续航空燃料 监测网络的本周更新，请访问原文了解详情。",
           "summaryEn": "This week’s update from the Sustainable aviation fuel monitoring network. Open the source for full details.",
           "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5kWHJfUjl2YUh1MVJXdGZYY0czNEgwb21iOG9JWGNXQXBoWWM1MEZVZ2NBZFZDUlozOTZTOUdzX1V2MnZ3VXkxSk9EMHhyTWZ1bUFpQzBXaWF0WmlaVVRqVHVlM240N0JuYnBlanFHZjhJZzg3Vm1CU2lB?oc=5",
-          "publishedAt": "2026-08-07",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOd1pVNFJlOW5vREw3UUJ1SmxWREp5MTAzOURzWnBpblBuWmoxTHNNLXFWRzQ1akU0RzRkUk9ULTk1cW54NlZGM0RqX2ZGU25XRnRpX1pCLXZMZFBOVzJfRjF2OXFRMXZsRkZRbnhTbDhIbE5mLUR2YmdmNnhjcUZtcUkxM0pXWGFmb2pGZkRQekpqY0ItdkNhdGx5UFIyaGx2WGZtNXhKYURXZDA?oc=5",
+          "publishedAt": "2026-08-11",
           "kind": "新闻"
         },
         {
-          "title": "American Airlines and Infinium announce commercial passenger flight powered by eSAF - American Airlines",
-          "titleEn": "American Airlines and Infinium announce commercial passenger flight powered by eSAF - American Airlines",
+          "title": "Delta joins Minnesota leaders to celebrate opening of new SAF blending facility serving MSP - news.delta.com",
+          "titleEn": "Delta joins Minnesota leaders to celebrate opening of new SAF blending facility serving MSP - news.delta.com",
           "summary": "来自 可持续航空燃料 监测网络的本周更新，请访问原文了解详情。",
           "summaryEn": "This week’s update from the Sustainable aviation fuel monitoring network. Open the source for full details.",
           "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOYXlXaVdPa3JZVzFmRERaclhfSFpmeV9lWE1EaHA2NUQxWFp4ejF5eDM5azllY1VrMkk0Mlh6Tkt6R0NCRkRrVFhWbThqN1labDlqaWo3UmE4V1FuLUFyOV9DdklsNk14NEsxNUhvQnVlbW5aSEZ2M3dnVDlOQnNhZndkNGVwNlpTSDZtcnFPNk53Vl9CVmhqOXB4ODdWOF9KRTcySHlMYTRGaGN6TUx6cTdRUWdjX3ZjWWdadEpsVjJEWVVRQWVfQXU2cjhrTlhYVHh0eUJnbkhKVk5vUWRyZW5TMko?oc=5",
-          "publishedAt": "2026-08-06",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNNlhqYy1OblFCSGRTLV94N3FSZEJzSDkteFNnSTY3b0ZWUVl1d1R3T3hhamVzdlJVTUVEMl9KQ3RpeE5XOGVjY21wVE91SnBoN0FDd0c0Q2RDWDlld0VnVFluMUU0anNTSlZpa0VxaDdHOVBtcVdrcElIX21XSGRjajdZNEEzbEJOUm40NXlnc2FrRFJ5dU9INU52LV9rcXd0ZmN2OGhhUjdSOHJM?oc=5",
+          "publishedAt": "2026-07-27",
           "kind": "新闻"
         }
       ]
@@ -270,33 +270,33 @@
       ],
       "items": [
         {
-          "title": "Developing Biogas, a Low-carbon, Renewable and Local Energy Source - TotalEnergies.com",
-          "titleEn": "Developing Biogas, a Low-carbon, Renewable and Local Energy Source - TotalEnergies.com",
+          "title": "Scaling biomethane: The next phase of growth in renewable gas - McKinsey & Company",
+          "titleEn": "Scaling biomethane: The next phase of growth in renewable gas - McKinsey & Company",
           "summary": "来自 沼气与生物甲烷 监测网络的本周更新，请访问原文了解详情。",
           "summaryEn": "This week’s update from the Biogas and biomethane monitoring network. Open the source for full details.",
           "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPRzFkMFp2d0JzbHRDanQ2ZWhDWEdndHUyYWotcjJ6c0plZFpIdmFhRVBTTkNEYW1sc2dHd1htOWxYdllXWDV4enZmOTB0NzNuTldNUHJ5US1tb3pRemh5cVg2T0w2bG9HSWNfNFNKcnotNFBiN21qbEpwQ0oya1liNFRSRWp6cW1PbVcyQjZDZEJPeEJpMDJudUtvOXNiZw?oc=5",
-          "publishedAt": "2026-07-17",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPdk5JWDAyUzgyZUNfaVA2T3ExRENpX3VRVjVNRkpycGFjVlFCSDBnWU5sMzZJYVdjZlhxNEdteDZwU3ljNFV1dEZ0MTMtTXpLbWx1NnVoU1dKX1E0SHFoU21zR2RlR1JmY0p6THJuWE5kQUV5STV2elFwXzNqMGNGZ2I0cHlZOElxRTJOcmF0WGZWNUNja1ZQSElrVjN5U1YtaWd3dll6Y2JjbExSWlBYZXpXUVdRNFotVXJSQ04wZ3N5bkNrcW9HWjM3Y1hCMFh5N1p4Sg?oc=5",
+          "publishedAt": "2026-05-01",
           "kind": "新闻"
         },
         {
-          "title": "Envitec lands German biomethane project - gasworld",
-          "titleEn": "Envitec lands German biomethane project - gasworld",
+          "title": "Poland to provide EUR 422m to back biogas, biomethane projects in 2026 - Renewables Now",
+          "titleEn": "Poland to provide EUR 422m to back biogas, biomethane projects in 2026 - Renewables Now",
           "summary": "来自 沼气与生物甲烷 监测网络的本周更新，请访问原文了解详情。",
           "summaryEn": "This week’s update from the Biogas and biomethane monitoring network. Open the source for full details.",
           "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRnJlM2xDZC1SQmhsNWR2dXRBRlhONVpHTEt4d0ZvSUpEMDA2cXFVaWxyYzBHNHRYdjU5VE5laWtiV05UVVVWX3FlZXBiUERlUjFDQ2RITDk5S0JnQzdRQ0hlX3VSd3h0OVpfV0NGTThwbVhtYm5LT0dXQmRpclR3TG00UDU3bEo5LUFfVldEeFE?oc=5",
-          "publishedAt": "2026-07-27",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNbWsxQjZwODQyS1JHalZzOTVoRU1lY2xJcFhKc0xXT2prZHdzVjhaSUhoeW5EbjlNUXVKRGRCeU9wTTlnanV4RXNLcmpCNXJ6VF9PT2VTMC1QcGtkbHo2RGR3OG5NYVkxX1RWa3lZLTBZd1RyYU9NY05maHQ4Y3J0U053NzlnOG5qZUlWSndiNmtjbE5jQmtzaWhfY0l3SHVoZ2lDc1NWdXBTSEY0eGc?oc=5",
+          "publishedAt": "2026-04-13",
           "kind": "新闻"
         },
         {
-          "title": "EnviTec Biogas realizes first combined biogas and biomethane plant in Estonia - Biomass Magazine",
-          "titleEn": "EnviTec Biogas realizes first combined biogas and biomethane plant in Estonia - Biomass Magazine",
+          "title": "Investment in a Biomethane Production Project in Minas Gerais, Brazil | 2026 | Topics - mitsui.com",
+          "titleEn": "Investment in a Biomethane Production Project in Minas Gerais, Brazil | 2026 | Topics - mitsui.com",
           "summary": "来自 沼气与生物甲烷 监测网络的本周更新，请访问原文了解详情。",
           "summaryEn": "This week’s update from the Biogas and biomethane monitoring network. Open the source for full details.",
           "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMnVYR3M4Y1dNUnAwY0ZKYzZFX2xaUlpDRXFvLTBrcmZNREhiR0dqU21INkRsODBEd1p6R21FZzhXcFRZUDhCYTJiRzRGUWhXUmJFdk42Zzh2dk5aQ25lY3pqRFNTNnhzVUFYYVFZakVfenBSVHRqM2tkcjIzYU9jZzFUbDRjQ0JaYWtRQXZrejlGVHFqYUc1SXF4dFd1b093Z0pvUS1TVlpULXNMMkZxLWpfQVY?oc=5",
-          "publishedAt": "2026-07-20",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9hRkNUNi0wYU4yODI5T2hGQmthN0NxSksxVFNVQkoyODl6TUNlZkN2MU5oV3QxQ3VRaEROeWZadF9MVGFMVkt6RDIxTWxkZXA0bWhCeEZwcHNEUGhaLVBTT202cU9RekNiaDIw?oc=5",
+          "publishedAt": "2026-06-26",
           "kind": "新闻"
         }
       ]
@@ -320,13 +320,13 @@
       ],
       "items": [
         {
-          "title": "Stocks mixed with Nasdaq down; US oil eases on Iran talks - Reuters",
-          "titleEn": "Stocks mixed with Nasdaq down; US oil eases on Iran talks - Reuters",
+          "title": "How the Largest Stock ETFs in the UK Performed - Morningstar",
+          "titleEn": "How the Largest Stock ETFs in the UK Performed - Morningstar",
           "summary": "来自 全球主要股市 监测网络的本周更新，请访问原文了解详情。",
           "summaryEn": "This week’s update from the Major global equities monitoring network. Open the source for full details.",
           "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPSjNOaFJhdXRJblJMNldJM09LeFJDOXNqY2Y0R3dhcGt3S1ZyNm1peFdvVlBfN2RrNmtCYVhQa3pzenI5VlBld2c2Y0JPLTAzNWRhTWxUYWxjNEpvWGxIYlR3M2NLdGg5RnpRSmtYVVVwamJfYTZ5S1JaQ3J5QjFEQ3B0WQ?oc=5",
-          "publishedAt": "2026-08-06",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQaU90VEFfaWhqVFJ4N2NEeGNMckc1SmEwdHFfMXA5ZWJVZHFxME5yR0hFUHMzeE5IVnBMLWZVR0lXekRreS1CanljYUJjWjRka244blBDNUVWNmtVa1lZTmw4RzhYSmx0WDJGUWZRQ01pVENNZ1dhalpzR2JSLXpGXzVrTQ?oc=5",
+          "publishedAt": "2026-08-07",
           "kind": "新闻"
         },
         {
@@ -380,23 +380,23 @@
           "kind": "新闻"
         },
         {
-          "title": "EU Carbon Market Reform Could Transform Biogenic CO₂ Removal Economics - ResourceWise",
-          "titleEn": "EU Carbon Market Reform Could Transform Biogenic CO₂ Removal Economics - ResourceWise",
+          "title": "Understanding the EU ETS reform 2026 - Enerdata",
+          "titleEn": "Understanding the EU ETS reform 2026 - Enerdata",
           "summary": "来自 碳排放交易 监测网络的本周更新，请访问原文了解详情。",
           "summaryEn": "This week’s update from the Carbon markets monitoring network. Open the source for full details.",
           "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaVRZZVBPdmdrZ3hmak1hMVNGOWo5cEdicmhMa3c2cGVZVThpMGZCQmRhS2tGZHdpQnNKdzQ1c2FNTzkwV0R6cldONWN5M3c3NzRKcjQySlkwbFc2V25KZzBBT2ZxNy1aTXg4dkdnc0poTTJDQTBfR2lqYUJicnUzcmsxVzIxbEZGMHhmSVVXX1hjWWE4ZGt3S2s4Zld1Mjk4Z1poZDV30gG2AUFVX3lxTE9sNFBzY1Q0aGpNaldmRi1DekduX3ZFcUF6eXBVNUdVUlVZWG45eWk3SEpRal9KOVczaXkzRUpDX3VVMk01WU9jVW02VHZ3SnIxbm5tajdkUXc0Y0xfSHVLLUlldkNZUlNQVl9hZXhTYm5Vd2czemVSSGw3U0VKczdnT1JJVEJyNHVxMFFRaHQwUFdsLXduU1FYXzNkSVQ5MG9zcEFlekZiVmtQYlZzSlpJSlAtLXdn?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPU0Rvc21LV3VUU2RhVGktS3hqNURBMElyc0FVYWd0UTFobnFQZE1CeFg1MGhmXzhTTU5NVXBxNF9sQXIwWl9qMjFjWlFmWkVpTmxESFphV21ueUpVZFJmTDNsNFZabnQ5Y0hGZU1aMmh1TTB1eGwtZzl2ZHI3OUxHbm9JLUhiRnpyeEdzSGQ3RU1zdWpaT2YweEpxOG5NeE1IaWZXVUdpRzBGQXhfbEN5YjhSZVlTd0k?oc=5",
           "publishedAt": "2026-08-06",
           "kind": "新闻"
         },
         {
-          "title": "Q&A: What the EU’s carbon market review means for climate action - Carbon Brief",
-          "titleEn": "Q&A: What the EU’s carbon market review means for climate action - Carbon Brief",
+          "title": "Market Stability Reserve - climate.ec.europa.eu",
+          "titleEn": "Market Stability Reserve - climate.ec.europa.eu",
           "summary": "来自 碳排放交易 监测网络的本周更新，请访问原文了解详情。",
           "summaryEn": "This week’s update from the Carbon markets monitoring network. Open the source for full details.",
           "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTTlrYVFHN2lRTHNldmpfNFRRQzdESllFcDlkSm1ucnRJUjZBZkh1WWgyRkVjOTBtVnpwU2JyUndBV2ZqNXQtN1Y5bE14T0NKOXBZZk5oQ0QxNmlBa0pqMC1LQkk4TGNoVF85enN0eV9Hc3AxdlBHNzluYzFOTEpxQVYtS2RkR3NoX2RpenlsUjBQa3c?oc=5",
-          "publishedAt": "2026-07-20",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVU9LcGNnVU9qT0xZMHJqdVdCdERWamNVVnR1Uml5Ym5BaDJ5eTFRVUZYUXBzQ21YTlJIcURjYmJKRzdyc2JnRURCdFJOdWFHNWctYWNlWVFaNTdtendPOGpGMnF4QkZjYWVPejZQZmRhNHRvTE9XRld5Rmd1NkJqOThvVjEtdVRpNjdDYnVnV2dyRlpwUVZVelV5alptQk1QeHJLUFRCbG9SU2xhUTNXY1lzbTFGRzQwZDdJ?oc=5",
+          "publishedAt": "2026-08-05",
           "kind": "新闻"
         }
       ]
