@@ -92,18 +92,22 @@ class WeeklyIntelligenceTest(unittest.TestCase):
                     rf'id: "{desk_id}",\s*title: "[^"]+",\s*cadence: "{cadence}"',
                 )
 
-    def test_authority_source_links_are_rendered_only_in_global_directory(self):
+    def test_every_news_item_has_a_direct_source_link(self):
         script = Path("script.js").read_text()
-        global_directory_start = script.index('if (resourceDirectory && resourceDesk)')
-        global_directory = script[global_directory_start:]
-        item_rendering = script[:global_directory_start]
 
-        self.assertEqual(script.count('topic.sources.map'), 1)
-        self.assertIn('topic.sources.map', global_directory)
-        self.assertNotIn('topic.sources.map', item_rendering)
-        self.assertNotIn('<a class="focus-item"', item_rendering)
-        self.assertNotIn('href="${escapeHtml(item.url)}"', item_rendering)
-        self.assertIn('<article class="focus-item">', item_rendering)
+        self.assertIn("function renderNewsItem", script)
+        self.assertIn('href="${escapeHtml(item.url)}"', script)
+        self.assertIn('target="_blank" rel="noreferrer"', script)
+        self.assertIn('查看原文', script)
+        self.assertIn('Read source', script)
+
+    def test_framework_page_mounts_scenery_intelligence_without_source_links(self):
+        html = Path("framework.html").read_text()
+        script = Path("script.js").read_text()
+
+        self.assertIn('id="framework-scenery-desk"', html)
+        self.assertIn('function renderFrameworkScenery', script)
+        self.assertIn('data?.topics?.find((topic) => topic.id === "scenery")', script)
 
     def test_special_focus_signal_copy_only_names_ai_and_cultural_landscapes(self):
         script = Path("script.js").read_text()

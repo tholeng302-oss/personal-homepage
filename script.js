@@ -571,7 +571,8 @@ const siteContent = {
 
 const state = {
   locale: "zh",
-  weeklyIntelligence: null
+  weeklyIntelligence: null,
+  intelligenceFilter: "all"
 };
 
 const specialFocusTopicIds = new Set(["ai", "scenery"]);
@@ -581,6 +582,11 @@ const intelligenceDeskGroups = [
   { id: "hydrogen-biogas", topicIds: ["hydrogen", "biogas"] },
   { id: "markets-carbon", topicIds: ["stocks", "carbon"] }
 ];
+
+const intelligenceFilterLabels = {
+  zh: { all: "全部信息", "green-fuels": "绿色燃料", "hydrogen-biogas": "氢能与沼气", "markets-carbon": "股市与碳交易", weeklySignals: "本周三条信号", sourceLink: "查看原文" },
+  en: { all: "All updates", "green-fuels": "Green fuels", "hydrogen-biogas": "Hydrogen & biogas", "markets-carbon": "Markets & carbon", weeklySignals: "Three signals this week", sourceLink: "Read source" }
+};
 
 function setText(id, value) {
   const element = document.getElementById(id);
@@ -682,6 +688,33 @@ function formatUpdateDate(value, locale) {
   }).format(date);
 }
 
+function renderNewsItem(item, locale, headingTag = "h4") {
+  const labels = intelligenceFilterLabels[locale];
+  const title = locale === "zh" ? item.title : item.titleEn;
+  const summary = locale === "zh" ? item.summary : item.summaryEn;
+
+  return `
+    <article class="focus-item">
+      <span class="tag">${escapeHtml(item.kind)}</span>
+      <${headingTag}>${escapeHtml(title)}</${headingTag}>
+      <p>${escapeHtml(summary)}</p>
+      <div class="focus-item-footer">
+        <span class="focus-item-meta">${escapeHtml(item.source)} · ${escapeHtml(item.publishedAt)}</span>
+        <a class="focus-source-link" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${labels.sourceLink} <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+  `;
+}
+
+function getDeskSignalItems(data) {
+  const deskTopicIds = new Set(intelligenceDeskGroups.flatMap((group) => group.topicIds));
+  return data.topics
+    .filter((topic) => deskTopicIds.has(topic.id))
+    .flatMap((topic) => topic.items.map((item) => ({ item, topic })))
+    .sort((first, second) => new Date(second.item.publishedAt) - new Date(first.item.publishedAt))
+    .slice(0, 3);
+}
+
 function renderFrameworkScenery(data, locale) {
   const container = document.getElementById("framework-scenery-desk");
   if (!container) return;
@@ -699,7 +732,7 @@ function renderFrameworkScenery(data, locale) {
       ${photos.map((photo) => `<figure><img src="${escapeHtml(photo.image)}" alt="${escapeHtml(photo.alt)}"><figcaption>${escapeHtml(photo.title)}</figcaption></figure>`).join("")}
     </div>
     <div class="framework-scenery-items">
-      ${scenery.items.slice(0, 3).map((item) => `<article class="focus-item"><span class="tag">${escapeHtml(item.kind)}</span><h3>${escapeHtml(locale === "zh" ? item.title : item.titleEn)}</h3><p>${escapeHtml(locale === "zh" ? item.summary : item.summaryEn)}</p><span class="focus-item-meta">${escapeHtml(item.source)} · ${escapeHtml(item.publishedAt)}</span></article>`).join("")}
+      ${scenery.items.slice(0, 3).map((item) => renderNewsItem(item, locale, "h3")).join("")}
     </div>
   `;
 }
@@ -709,6 +742,8 @@ function renderWeeklyIntelligence() {
   const locale = state.locale;
   const weekly = document.getElementById("focus-weekly");
   const liveBriefs = document.getElementById("intel-live-briefs");
+  const weeklySignals = document.getElementById("intel-weekly-signals");
+  const filterBar = document.getElementById("intel-filter-bar");
   const resourceDirectory = document.getElementById("global-resource-directory");
   const intelligenceContent = siteContent[locale].intelligence;
   const resourceDesk = intelligenceContent.find((item) => item.id === "global-resource-directory");
@@ -721,6 +756,8 @@ function renderWeeklyIntelligence() {
     setText("focus-updated", locale === "zh" ? "暂时无法载入更新，保留上次内容。" : "The update is unavailable; the last published brief is retained.");
     if (weekly) weekly.innerHTML = "";
     if (liveBriefs) liveBriefs.innerHTML = "";
+    if (weeklySignals) weeklySignals.innerHTML = "";
+    if (filterBar) filterBar.innerHTML = "";
     if (resourceDirectory) resourceDirectory.innerHTML = "";
     renderFrameworkScenery(null, locale);
     return;
@@ -736,21 +773,38 @@ function renderWeeklyIntelligence() {
           <span>${locale === "zh" ? "本周更新" : "Weekly brief"}</span>
         </div>
         <div class="focus-items">
-          ${topic.items.slice(0, 3).map((item) => `
-            <article class="focus-item">
-              <span class="tag">${escapeHtml(item.kind)}</span>
-              <h3>${escapeHtml(locale === "zh" ? item.title : item.titleEn)}</h3>
-              <p>${escapeHtml(locale === "zh" ? item.summary : item.summaryEn)}</p>
-              <span class="focus-item-meta">${escapeHtml(item.source)} · ${escapeHtml(item.publishedAt)}</span>
-            </article>
-          `).join("")}
+          ${topic.items.slice(0, 3).map((item) => renderNewsItem(item, locale, "h3")).join("")}
         </div>
       </article>
     `).join("");
   }
 
+  const labels = intelligenceFilterLabels[locale];
+  if (weeklySignals) {
+    weeklySignals.innerHTML = `
+      <div class="intel-signals-heading">
+        <p class="section-kicker">WEEKLY SIGNALS</p>
+        <h3>${labels.weeklySignals}</h3>
+      </div>
+      <div class="intel-signal-grid">
+        ${getDeskSignalItems(data).map(({ item, topic }) => `
+          <article class="intel-signal-card">
+            <p class="focus-topic-label">${escapeHtml(locale === "zh" ? topic.name : topic.nameEn)}</p>
+            ${renderNewsItem(item, locale, "h4")}
+          </article>
+        `).join("")}
+      </div>
+    `;
+  }
+
+  if (filterBar) {
+    filterBar.innerHTML = ["all", ...intelligenceDeskGroups.map((group) => group.id)]
+      .map((filterId) => `<button class="intel-filter" type="button" data-intel-filter="${filterId}" aria-pressed="${state.intelligenceFilter === filterId}">${labels[filterId]}</button>`)
+      .join("");
+  }
+
   if (liveBriefs) {
-    liveBriefs.innerHTML = intelligenceDeskGroups.map((group) => {
+    liveBriefs.innerHTML = intelligenceDeskGroups.filter((group) => state.intelligenceFilter === "all" || group.id === state.intelligenceFilter).map((group) => {
       const desk = intelligenceContent.find((item) => item.id === group.id);
       const topics = group.topicIds
         .map((topicId) => data.topics.find((topic) => topic.id === topicId))
@@ -769,14 +823,7 @@ function renderWeeklyIntelligence() {
               <section class="intel-topic-brief">
                 <p class="focus-topic-label">${escapeHtml(locale === "zh" ? topic.name : topic.nameEn)}</p>
                 <div class="focus-items">
-                  ${topic.items.slice(0, 3).map((item) => `
-                    <article class="focus-item">
-                      <span class="tag">${escapeHtml(item.kind)}</span>
-                      <h4>${escapeHtml(locale === "zh" ? item.title : item.titleEn)}</h4>
-                      <p>${escapeHtml(locale === "zh" ? item.summary : item.summaryEn)}</p>
-                      <span class="focus-item-meta">${escapeHtml(item.source)} · ${escapeHtml(item.publishedAt)}</span>
-                    </article>
-                  `).join("")}
+                  ${topic.items.slice(0, 3).map((item) => renderNewsItem(item, locale, "h4")).join("")}
                 </div>
               </section>
             `).join("")}
@@ -807,6 +854,19 @@ function renderWeeklyIntelligence() {
   }
 
   renderFrameworkScenery(data, locale);
+}
+
+function setupIntelligenceFilters() {
+  const filterBar = document.getElementById("intel-filter-bar");
+  if (!filterBar || filterBar.dataset.bound === "true") return;
+
+  filterBar.dataset.bound = "true";
+  filterBar.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-intel-filter]");
+    if (!button) return;
+    state.intelligenceFilter = button.dataset.intelFilter || "all";
+    renderWeeklyIntelligence();
+  });
 }
 
 async function loadWeeklyIntelligence() {
@@ -1166,6 +1226,7 @@ function hydratePage() {
   setupParallax();
   setupLanguageToggle();
   setupLightbox();
+  setupIntelligenceFilters();
   loadWeeklyIntelligence();
 }
 
