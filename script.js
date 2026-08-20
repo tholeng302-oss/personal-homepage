@@ -715,25 +715,49 @@ function getDeskSignalItems(data) {
     .slice(0, 3);
 }
 
-function renderFrameworkScenery(data, locale) {
-  const container = document.getElementById("framework-scenery-desk");
+function getOverviewTopicItems(data, topicIds) {
+  if (!data?.topics) return [];
+  const ids = new Set(topicIds);
+  return data.topics
+    .filter((topic) => ids.has(topic.id))
+    .flatMap((topic) => topic.items.map((item) => ({ item, topic })))
+    .sort((first, second) => new Date(second.item.publishedAt) - new Date(first.item.publishedAt))
+    .slice(0, 3);
+}
+
+function renderFrameworkOverview(data, locale) {
+  const container = document.getElementById("framework-overview");
   if (!container) return;
 
-  const scenery = data?.topics?.find((topic) => topic.id === "scenery");
+  const isChinese = locale === "zh";
+  const energyItems = getOverviewTopicItems(data, ["methanol", "saf", "ammonia", "hydrogen", "biogas"]);
+  const capitalItems = getOverviewTopicItems(data, ["stocks", "carbon"]);
+  const sceneryItems = getOverviewTopicItems(data, ["scenery"]);
   const photos = siteContent[locale].publicMemory.photos.slice(0, 3);
-
-  if (!scenery) {
-    container.innerHTML = `<p class="framework-scenery-empty">${locale === "zh" ? "风景与文化信息正在汇总" : "Scenery and culture updates are being collected"}</p>`;
-    return;
-  }
+  const emptyMessage = isChinese ? "信息正在汇总，请稍后查看" : "Updates are being collected. Please check back soon.";
+  const renderItems = (items) => items.length
+    ? items.map(({ item, topic }) => `<div class="framework-overview-news"><p class="focus-topic-label">${escapeHtml(isChinese ? topic.name : topic.nameEn)}</p>${renderNewsItem(item, locale, "h3")}</div>`).join("")
+    : `<p class="framework-overview-empty">${emptyMessage}</p>`;
 
   container.innerHTML = `
-    <div class="framework-scenery-photos">
-      ${photos.map((photo) => `<figure><img src="${escapeHtml(photo.image)}" alt="${escapeHtml(photo.alt)}"><figcaption>${escapeHtml(photo.title)}</figcaption></figure>`).join("")}
-    </div>
-    <div class="framework-scenery-items">
-      ${scenery.items.slice(0, 3).map((item) => renderNewsItem(item, locale, "h3")).join("")}
-    </div>
+    <section class="framework-overview-section" id="framework-energy">
+      <div class="framework-overview-heading"><div><p class="section-kicker">01 · ENERGY TRANSITION</p><h2>${isChinese ? "能源转型" : "Energy transition"}</h2><p>${isChinese ? "绿色燃料、氢能、沼气与产业政策的最新信号" : "Current signals across green fuels, hydrogen, biogas, and industrial policy"}</p></div><a href="intelligence.html">${isChinese ? "查看全部情报" : "View all intelligence"} <span aria-hidden="true">→</span></a></div>
+      <div class="framework-overview-news-grid">${renderItems(energyItems)}</div>
+    </section>
+    <section class="framework-overview-section" id="framework-capital">
+      <div class="framework-overview-heading"><div><p class="section-kicker">02 · CAPITAL TRENDS</p><h2>${isChinese ? "资本趋势" : "Capital trends"}</h2><p>${isChinese ? "全球主要股市、碳交易与行业变化的最新信号" : "Current signals across major markets, carbon trading, and industry change"}</p></div><a href="intelligence.html">${isChinese ? "查看全部情报" : "View all intelligence"} <span aria-hidden="true">→</span></a></div>
+      <div class="framework-overview-news-grid">${renderItems(capitalItems)}</div>
+    </section>
+    <section class="framework-overview-section" id="framework-scenery">
+      <div class="framework-overview-heading"><div><p class="section-kicker">03 · SCENERY & CULTURE</p><h2>${isChinese ? "风景与文化" : "Scenery & culture"}</h2><p>${isChinese ? "公开的风景照片，以及信息台的文化与景观更新" : "Public landscape photographs and cultural-scene updates from the intelligence desk"}</p></div><a href="memories.html">${isChinese ? "查看时光宝盒" : "View Time Box"} <span aria-hidden="true">→</span></a></div>
+      <div class="framework-overview-photos">${photos.map((photo) => `<figure><img src="${escapeHtml(photo.image)}" alt="${escapeHtml(photo.alt)}"><figcaption>${escapeHtml(photo.title)}</figcaption></figure>`).join("")}</div>
+      <div class="framework-overview-news-grid">${renderItems(sceneryItems)}</div>
+    </section>
+    <section class="framework-overview-section" id="framework-memory">
+      <div class="framework-overview-heading"><div><p class="section-kicker">04 · FAMILY MEMORIES</p><h2>${isChinese ? "家人记忆" : "Family memories"}</h2><p>${isChinese ? "公开时光碎片可以回看；家庭影像与私密资料始终留在授权区" : "Public time fragments can be revisited; family images and private records remain in the authorized area"}</p></div><a href="memories.html">${isChinese ? "查看公开时光碎片" : "View public time fragments"} <span aria-hidden="true">→</span></a></div>
+      <div class="framework-memory-strip">${photos.map((photo) => `<article><p class="focus-topic-label">${escapeHtml(photo.timeGroupLabel)}</p><h3>${escapeHtml(photo.title)}</h3><p>${escapeHtml(photo.location)}</p></article>`).join("")}</div>
+      <a class="framework-private-link" href="family.html">${isChinese ? "进入家人授权区" : "Enter family authorized area"} <span aria-hidden="true">→</span></a>
+    </section>
   `;
 }
 
@@ -759,7 +783,7 @@ function renderWeeklyIntelligence() {
     if (weeklySignals) weeklySignals.innerHTML = "";
     if (filterBar) filterBar.innerHTML = "";
     if (resourceDirectory) resourceDirectory.innerHTML = "";
-    renderFrameworkScenery(null, locale);
+    renderFrameworkOverview(null, locale);
     return;
   }
 
@@ -853,7 +877,7 @@ function renderWeeklyIntelligence() {
     `;
   }
 
-  renderFrameworkScenery(data, locale);
+  renderFrameworkOverview(data, locale);
 }
 
 function setupIntelligenceFilters() {

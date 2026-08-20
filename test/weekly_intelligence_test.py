@@ -101,13 +101,23 @@ class WeeklyIntelligenceTest(unittest.TestCase):
         self.assertIn('查看原文', script)
         self.assertIn('Read source', script)
 
-    def test_framework_page_mounts_scenery_intelligence_without_source_links(self):
+    def test_framework_page_mounts_all_four_public_overview_sections(self):
         html = Path("framework.html").read_text()
         script = Path("script.js").read_text()
 
-        self.assertIn('id="framework-scenery-desk"', html)
-        self.assertIn('function renderFrameworkScenery', script)
-        self.assertIn('data?.topics?.find((topic) => topic.id === "scenery")', script)
+        self.assertIn('id="framework-overview"', html)
+        self.assertIn('href="#framework-energy"', html)
+        self.assertIn('href="#framework-capital"', html)
+        self.assertIn('href="#framework-scenery"', html)
+        self.assertIn('href="#framework-memory"', html)
+        self.assertIn('function renderFrameworkOverview', script)
+        self.assertIn('id="framework-energy"', script)
+        self.assertIn('id="framework-capital"', script)
+        self.assertIn('id="framework-scenery"', script)
+        self.assertIn('id="framework-memory"', script)
+        self.assertIn('href="intelligence.html"', script)
+        self.assertIn('href="memories.html"', script)
+        self.assertIn('href="family.html"', script)
 
     def test_special_focus_signal_copy_only_names_ai_and_cultural_landscapes(self):
         script = Path("script.js").read_text()
