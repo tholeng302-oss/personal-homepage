@@ -692,7 +692,8 @@ function renderNewsItem(item, locale, headingTag = "h4", options = {}) {
   const labels = intelligenceFilterLabels[locale];
   const title = locale === "zh" ? item.title : item.titleEn;
   const summary = locale === "zh" ? item.summary : item.summaryEn;
-  const kindLabel = options.showKind === false ? "" : `<span class="tag">${escapeHtml(item.kind)}</span>`;
+  const kind = options.kind ?? item.kind;
+  const kindLabel = options.showKind === false ? "" : `<span class="tag">${escapeHtml(kind)}</span>`;
 
   return `
     <article class="focus-item">
@@ -719,6 +720,19 @@ function renderCapitalItems(items, locale, emptyMessage) {
       ${items.map(({ item }) => renderNewsItem(item, locale, "h3", { showKind: false })).join("")}
     </div>
   `;
+}
+
+function renderSceneryItems(items, locale, emptyMessage) {
+  if (!items.length) {
+    return `<p class="framework-overview-empty">${emptyMessage}</p>`;
+  }
+
+  const detailKind = locale === "zh" ? "详情" : "Details";
+  return items.map(({ item }) => `
+    <div class="framework-overview-news">
+      ${renderNewsItem(item, locale, "h3", { kind: detailKind })}
+    </div>
+  `).join("");
 }
 
 function getDeskSignalItems(data) {
@@ -786,8 +800,9 @@ function renderFrameworkOverview(data, locale) {
     </section>
     <section class="framework-overview-section" id="framework-scenery">
       <div class="framework-overview-heading"><div><p class="section-kicker">03 · SCENERY & CULTURE</p><h2>${isChinese ? "风景与文化" : "Scenery & culture"}</h2><p>${isChinese ? "公开的风景照片，以及信息台的文化与景观更新" : "Public landscape photographs and cultural-scene updates from the intelligence desk"}</p></div><a href="memories.html">${isChinese ? "查看时光宝盒" : "View Time Box"} <span aria-hidden="true">→</span></a></div>
+      <p class="focus-topic-label">${isChinese ? "风景与文化景观" : "Scenery and cultural landscapes"}</p>
       <div class="framework-overview-photos">${photos.map((photo) => `<figure><img src="${escapeHtml(photo.image)}" alt="${escapeHtml(photo.alt)}"><figcaption>${escapeHtml(photo.title)}</figcaption></figure>`).join("")}</div>
-      <div class="framework-overview-news-grid">${renderItems(sceneryItems)}</div>
+      <div class="framework-overview-news-grid">${renderSceneryItems(sceneryItems, locale, emptyMessage)}</div>
     </section>
     <section class="framework-overview-section" id="framework-memory">
       <div class="framework-overview-heading"><div><p class="section-kicker">04 · FAMILY MEMORIES</p><h2>${isChinese ? "家人记忆" : "Family memories"}</h2><p>${isChinese ? "公开时光碎片可以回看；家庭影像与私密资料始终留在授权区" : "Public time fragments can be revisited; family images and private records remain in the authorized area"}</p></div><a href="memories.html">${isChinese ? "查看公开时光碎片" : "View public time fragments"} <span aria-hidden="true">→</span></a></div>

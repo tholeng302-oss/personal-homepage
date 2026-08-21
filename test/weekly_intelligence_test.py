@@ -140,7 +140,15 @@ class WeeklyIntelligenceTest(unittest.TestCase):
     def test_framework_uses_a_new_script_version_for_the_capital_list_layout(self):
         html = Path("framework.html").read_text()
 
-        self.assertIn('script.js?v=capital-news-columns-v2', html)
+        self.assertIn('script.js?v=capital-news-columns-v3', html)
+
+    def test_scenery_overview_uses_one_photo_group_label_and_detail_tags(self):
+        script = Path("script.js").read_text()
+
+        self.assertIn("function renderSceneryItems", script)
+        self.assertIn('isChinese ? "风景与文化景观" : "Scenery and cultural landscapes"', script)
+        self.assertIn('const detailKind = locale === "zh" ? "详情" : "Details"', script)
+        self.assertIn("renderSceneryItems(sceneryItems, locale, emptyMessage)", script)
 
     def test_special_focus_signal_copy_only_names_ai_and_cultural_landscapes(self):
         script = Path("script.js").read_text()
