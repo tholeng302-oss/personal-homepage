@@ -16,10 +16,11 @@ class WeeklyIntelligenceTest(unittest.TestCase):
             "biogas",
             "stocks",
             "carbon",
+            "commodities",
             "scenery",
         }
         topic_ids = {topic["id"] for topic in data["topics"]}
-        self.assertEqual(len(data["topics"]), 9)
+        self.assertEqual(len(data["topics"]), 10)
         self.assertEqual(len(topic_ids), len(data["topics"]))
         self.assertEqual(topic_ids, expected_topic_ids)
         for topic in data["topics"]:
@@ -70,7 +71,7 @@ class WeeklyIntelligenceTest(unittest.TestCase):
             '''const intelligenceDeskGroups = [
   { id: "green-fuels", topicIds: ["methanol", "saf", "ammonia"] },
   { id: "hydrogen-biogas", topicIds: ["hydrogen", "biogas"] },
-  { id: "markets-carbon", topicIds: ["stocks", "carbon"] }
+  { id: "markets-carbon", topicIds: ["stocks", "carbon", "commodities"] }
 ];''',
             script,
         )
@@ -118,6 +119,16 @@ class WeeklyIntelligenceTest(unittest.TestCase):
         self.assertIn('href="intelligence.html"', script)
         self.assertIn('href="memories.html"', script)
         self.assertIn('href="family.html"', script)
+
+    def test_capital_overview_has_separate_equities_carbon_and_commodities_blocks(self):
+        script = Path("script.js").read_text()
+
+        self.assertIn('id: "framework-capital-equities"', script)
+        self.assertIn('id: "framework-capital-carbon"', script)
+        self.assertIn('id: "framework-capital-commodities"', script)
+        self.assertIn('getOverviewTopicItems(data, ["stocks"])', script)
+        self.assertIn('getOverviewTopicItems(data, ["carbon"])', script)
+        self.assertIn('getOverviewTopicItems(data, ["commodities"])', script)
 
     def test_special_focus_signal_copy_only_names_ai_and_cultural_landscapes(self):
         script = Path("script.js").read_text()

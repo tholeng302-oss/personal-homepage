@@ -402,6 +402,60 @@
       ]
     },
     {
+      "id": "commodities",
+      "name": "国际主要大宗商品市场",
+      "nameEn": "Major global commodity markets",
+      "sources": [
+        {
+          "name": "World Bank Commodity Markets",
+          "url": "https://www.worldbank.org/en/research/commodity-markets"
+        },
+        {
+          "name": "CME Group Markets",
+          "url": "https://www.cmegroup.com/markets.html"
+        },
+        {
+          "name": "ICE Market Data",
+          "url": "https://www.ice.com/marketdata/reports/"
+        }
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=global+commodity+markets+oil+gold+copper+agriculture&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "items": [
+        {
+          "title": "世界银行大宗商品市场研究与展望",
+          "titleEn": "World Bank commodity markets research and outlook",
+          "summary": "跟踪能源、金属与农产品价格周期，以及供需与宏观环境变化。",
+          "summaryEn": "Tracks energy, metals, and agriculture price cycles alongside supply, demand, and macroeconomic shifts.",
+          "source": "World Bank Commodity Markets",
+          "url": "https://www.worldbank.org/en/research/commodity-markets",
+          "publishedAt": "2026-08-21",
+          "kind": "市场资源"
+        },
+        {
+          "title": "CME Group 主要期货市场",
+          "titleEn": "CME Group major futures markets",
+          "summary": "查看能源、金属、农产品与利率等重点期货市场的公开行情与合约信息。",
+          "summaryEn": "Public market and contract information across energy, metals, agriculture, and interest-rate futures.",
+          "source": "CME Group Markets",
+          "url": "https://www.cmegroup.com/markets.html",
+          "publishedAt": "2026-08-21",
+          "kind": "市场资源"
+        },
+        {
+          "title": "ICE 大宗商品市场数据",
+          "titleEn": "ICE commodity market data",
+          "summary": "获取能源、软商品与相关衍生品市场的数据入口和公开报告。",
+          "summaryEn": "Data and public-report entry points for energy, soft commodities, and related derivatives.",
+          "source": "ICE Market Data",
+          "url": "https://www.ice.com/marketdata/reports/",
+          "publishedAt": "2026-08-21",
+          "kind": "市场资源"
+        }
+      ]
+    },
+    {
       "id": "scenery",
       "name": "风景与文化景观",
       "nameEn": "Scenery and cultural landscapes",

@@ -229,9 +229,9 @@ const siteContent = {
       },
       {
         id: "markets-carbon",
-        title: "股市与碳交易观察",
+        title: "股市、碳交易与大宗商品观察",
         cadence: "每日/每周",
-        scope: "重点股票、碳市场价格、行业情绪、政策事件与价值线索",
+        scope: "国际主要股市、碳交易市场与大宗商品市场的价格、政策、情绪与价值线索",
         mode: "市场快照 + 长线笔记",
         status: "自动阶段收集中"
       },
@@ -513,9 +513,9 @@ const siteContent = {
       },
       {
         id: "markets-carbon",
-        title: "Equities and Carbon Desk",
+        title: "Equities, Carbon & Commodities Desk",
         cadence: "Daily / Weekly",
-        scope: "Key stocks, carbon market pricing, sector sentiment, policy events, and value clues.",
+        scope: "Pricing, policy, sentiment, and value signals across major global equities, carbon markets, and commodities.",
         mode: "Market snapshots + long-form notes",
         status: "Automated staging in progress"
       },
@@ -580,12 +580,12 @@ const specialFocusTopicIds = new Set(["ai", "scenery"]);
 const intelligenceDeskGroups = [
   { id: "green-fuels", topicIds: ["methanol", "saf", "ammonia"] },
   { id: "hydrogen-biogas", topicIds: ["hydrogen", "biogas"] },
-  { id: "markets-carbon", topicIds: ["stocks", "carbon"] }
+  { id: "markets-carbon", topicIds: ["stocks", "carbon", "commodities"] }
 ];
 
 const intelligenceFilterLabels = {
-  zh: { all: "全部信息", "green-fuels": "绿色燃料", "hydrogen-biogas": "氢能与沼气", "markets-carbon": "股市与碳交易", weeklySignals: "本周三条信号", sourceLink: "查看原文" },
-  en: { all: "All updates", "green-fuels": "Green fuels", "hydrogen-biogas": "Hydrogen & biogas", "markets-carbon": "Markets & carbon", weeklySignals: "Three signals this week", sourceLink: "Read source" }
+  zh: { all: "全部信息", "green-fuels": "绿色燃料", "hydrogen-biogas": "氢能与沼气", "markets-carbon": "股市、碳交易与大宗商品", weeklySignals: "本周三条信号", sourceLink: "查看原文" },
+  en: { all: "All updates", "green-fuels": "Green fuels", "hydrogen-biogas": "Hydrogen & biogas", "markets-carbon": "Markets, carbon & commodities", weeklySignals: "Three signals this week", sourceLink: "Read source" }
 };
 
 function setText(id, value) {
@@ -731,7 +731,23 @@ function renderFrameworkOverview(data, locale) {
 
   const isChinese = locale === "zh";
   const energyItems = getOverviewTopicItems(data, ["methanol", "saf", "ammonia", "hydrogen", "biogas"]);
-  const capitalItems = getOverviewTopicItems(data, ["stocks", "carbon"]);
+  const capitalMarkets = [
+    {
+      id: "framework-capital-equities",
+      title: isChinese ? "国际主要股市" : "Major global equities",
+      items: getOverviewTopicItems(data, ["stocks"])
+    },
+    {
+      id: "framework-capital-carbon",
+      title: isChinese ? "国际主要碳交易市场" : "Major global carbon markets",
+      items: getOverviewTopicItems(data, ["carbon"])
+    },
+    {
+      id: "framework-capital-commodities",
+      title: isChinese ? "国际主要大宗商品市场" : "Major global commodity markets",
+      items: getOverviewTopicItems(data, ["commodities"])
+    }
+  ];
   const sceneryItems = getOverviewTopicItems(data, ["scenery"]);
   const photos = siteContent[locale].publicMemory.photos.slice(0, 3);
   const emptyMessage = isChinese ? "信息正在汇总，请稍后查看" : "Updates are being collected. Please check back soon.";
@@ -745,8 +761,13 @@ function renderFrameworkOverview(data, locale) {
       <div class="framework-overview-news-grid">${renderItems(energyItems)}</div>
     </section>
     <section class="framework-overview-section" id="framework-capital">
-      <div class="framework-overview-heading"><div><p class="section-kicker">02 · CAPITAL TRENDS</p><h2>${isChinese ? "资本趋势" : "Capital trends"}</h2><p>${isChinese ? "全球主要股市、碳交易与行业变化的最新信号" : "Current signals across major markets, carbon trading, and industry change"}</p></div><a href="intelligence.html">${isChinese ? "查看全部情报" : "View all intelligence"} <span aria-hidden="true">→</span></a></div>
-      <div class="framework-overview-news-grid">${renderItems(capitalItems)}</div>
+      <div class="framework-overview-heading"><div><p class="section-kicker">02 · CAPITAL TRENDS</p><h2>${isChinese ? "资本趋势" : "Capital trends"}</h2><p>${isChinese ? "国际主要股市、碳交易市场与大宗商品市场的阶段信息" : "Signals from major global equities, carbon markets, and commodity markets"}</p></div><a href="intelligence.html">${isChinese ? "查看全部情报" : "View all intelligence"} <span aria-hidden="true">→</span></a></div>
+      <div class="framework-capital-market-grid">${capitalMarkets.map((market) => `
+        <section class="framework-capital-market" id="${market.id}">
+          <p class="focus-topic-label">${market.title}</p>
+          <div class="framework-overview-news-grid">${renderItems(market.items)}</div>
+        </section>
+      `).join("")}</div>
     </section>
     <section class="framework-overview-section" id="framework-scenery">
       <div class="framework-overview-heading"><div><p class="section-kicker">03 · SCENERY & CULTURE</p><h2>${isChinese ? "风景与文化" : "Scenery & culture"}</h2><p>${isChinese ? "公开的风景照片，以及信息台的文化与景观更新" : "Public landscape photographs and cultural-scene updates from the intelligence desk"}</p></div><a href="memories.html">${isChinese ? "查看时光宝盒" : "View Time Box"} <span aria-hidden="true">→</span></a></div>
