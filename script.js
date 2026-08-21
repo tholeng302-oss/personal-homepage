@@ -735,6 +735,18 @@ function renderSceneryItems(items, locale, emptyMessage) {
   `).join("");
 }
 
+function renderAiItems(items, locale, emptyMessage) {
+  if (!items.length) {
+    return `<p class="framework-overview-empty">${emptyMessage}</p>`;
+  }
+
+  return items.map(({ item }) => `
+    <div class="framework-overview-news">
+      ${renderNewsItem(item, locale, "h3")}
+    </div>
+  `).join("");
+}
+
 function getDeskSignalItems(data) {
   const deskTopicIds = new Set(intelligenceDeskGroups.flatMap((group) => group.topicIds));
   return data.topics
@@ -778,6 +790,7 @@ function renderFrameworkOverview(data, locale) {
     }
   ];
   const sceneryItems = getOverviewTopicItems(data, ["scenery"]);
+  const aiItems = getOverviewTopicItems(data, ["ai"]);
   const photos = siteContent[locale].publicMemory.photos.slice(0, 3);
   const emptyMessage = isChinese ? "信息正在汇总，请稍后查看" : "Updates are being collected. Please check back soon.";
   const renderItems = (items) => items.length
@@ -804,10 +817,10 @@ function renderFrameworkOverview(data, locale) {
       <div class="framework-overview-photos">${photos.map((photo) => `<figure><img src="${escapeHtml(photo.image)}" alt="${escapeHtml(photo.alt)}"><figcaption>${escapeHtml(photo.title)}</figcaption></figure>`).join("")}</div>
       <div class="framework-overview-news-grid">${renderSceneryItems(sceneryItems, locale, emptyMessage)}</div>
     </section>
-    <section class="framework-overview-section" id="framework-memory">
-      <div class="framework-overview-heading"><div><p class="section-kicker">04 · FAMILY MEMORIES</p><h2>${isChinese ? "家人记忆" : "Family memories"}</h2><p>${isChinese ? "公开时光碎片可以回看；家庭影像与私密资料始终留在授权区" : "Public time fragments can be revisited; family images and private records remain in the authorized area"}</p></div><a href="memories.html">${isChinese ? "查看公开时光碎片" : "View public time fragments"} <span aria-hidden="true">→</span></a></div>
-      <div class="framework-memory-strip">${photos.map((photo) => `<article><p class="focus-topic-label">${escapeHtml(photo.timeGroupLabel)}</p><h3>${escapeHtml(photo.title)}</h3><p>${escapeHtml(photo.location)}</p></article>`).join("")}</div>
-      <a class="framework-private-link" href="family.html">${isChinese ? "进入家人授权区" : "Enter family authorized area"} <span aria-hidden="true">→</span></a>
+    <section class="framework-overview-section" id="framework-ai">
+      <div class="framework-overview-heading"><div><p class="section-kicker">04 · AI TRENDS</p><h2>${isChinese ? "人工智能动向" : "AI trends"}</h2><p>${isChinese ? "主要公司、基础模型、智能体、创作软件与行业工具的关键进展" : "Key developments across major companies, foundation models, agents, creative software, and industry tools"}</p></div><a href="intelligence.html">${isChinese ? "查看全部情报" : "View all intelligence"} <span aria-hidden="true">→</span></a></div>
+      <p class="focus-topic-label">${isChinese ? "主要公司 · 新应用软件 · 应用方向与工具" : "Major companies · new applications · use cases and tools"}</p>
+      <div class="framework-overview-news-grid">${renderAiItems(aiItems, locale, emptyMessage)}</div>
     </section>
   `;
 }

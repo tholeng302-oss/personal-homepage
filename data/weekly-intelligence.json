@@ -7,47 +7,55 @@
       "nameEn": "Artificial intelligence",
       "sources": [
         {
-          "name": "Stanford AI Index",
-          "url": "https://hai.stanford.edu/ai-index"
+          "name": "OpenAI Newsroom",
+          "url": "https://openai.com/news/company-announcements/"
         },
         {
-          "name": "OECD.AI",
-          "url": "https://oecd.ai/en/"
+          "name": "Anthropic Newsroom",
+          "url": "https://www.anthropic.com/news"
+        },
+        {
+          "name": "Google AI",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/"
+        },
+        {
+          "name": "Stanford AI Index",
+          "url": "https://hai.stanford.edu/ai-index"
         }
       ],
       "feeds": [
-        "https://news.google.com/rss/search?q=artificial+intelligence+research+policy&hl=en-US&gl=US&ceid=US:en"
+        "https://news.google.com/rss/search?q=OpenAI+Anthropic+Google+Microsoft+NVIDIA+AI+applications+tools&hl=en-US&gl=US&ceid=US:en"
       ],
       "items": [
         {
-          "title": "Fiscal policy will need new tools for uncertain AI future - Harvard Kennedy School",
-          "titleEn": "Fiscal policy will need new tools for uncertain AI future - Harvard Kennedy School",
-          "summary": "来自 人工智能 监测网络的本周更新，请访问原文了解详情。",
-          "summaryEn": "This week’s update from the Artificial intelligence monitoring network. Open the source for full details.",
-          "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNaXdZTzQ0TXg5VUtlNGdPODdib2VKTXhuNXVVSjlvZ2kwYkd2dkV4UFRYZ1N5bS1COXBjTnBLbkxrZzhJaHpDWjJIZWY4bjNkM3ppUjc5M18xdnBOanRMVTVkUkRMT3RRWXdSeWxEaVI2T1lyOUJVMHB1M3lhT0o2V1pGMTVRUGo0aXJCQi1SMlNhZFFWMHdmQWpuVEF4N1hGTWF6cC0zeVBKVjlnRG9RWEk1TGg5LW5WVldSTw?oc=5",
-          "publishedAt": "2026-08-17",
-          "kind": "新闻"
+          "title": "OpenAI：更强模型能力的安全与治理动向",
+          "titleEn": "OpenAI: safety and governance for more capable models",
+          "summary": "关注前沿模型在网络安全能力、监测、对齐与部署边界上的最新安排。",
+          "summaryEn": "A watch on cybersecurity capability, monitoring, alignment, and deployment boundaries for frontier models.",
+          "source": "OpenAI",
+          "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/",
+          "publishedAt": "2026-08-18",
+          "kind": "要闻"
         },
         {
-          "title": "Editorial: Research ethics and integrity in the artificial intelligence era - frontiersin.org",
-          "titleEn": "Editorial: Research ethics and integrity in the artificial intelligence era - frontiersin.org",
-          "summary": "来自 人工智能 监测网络的本周更新，请访问原文了解详情。",
-          "summaryEn": "This week’s update from the Artificial intelligence monitoring network. Open the source for full details.",
-          "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcDdkZTZseUZoQzEyTDdwREd4LWp0anFrTmZad3JaWVZ4OUQwZlBZZ3F2OHZkQzFES3Q4SzVZN3FfUXhiWHc3S1UtRjB3bEFKSlNrYzE3aVptY1ExWkdnaTd4VDB2YnNFZ2c2dXlQS1pSRk15bXNQakE0ODZyVzYzOTdQZXl2SzBQQkRtQmx4am95S1ppNEtPc2hHNzlCTGF1d0ZuWXJ3U2M0bGc?oc=5",
-          "publishedAt": "2026-07-22",
-          "kind": "新闻"
+          "title": "Anthropic：Claude Opus 5 与长程智能体工作流",
+          "titleEn": "Anthropic: Claude Opus 5 and long-running agent workflows",
+          "summary": "跟踪 Claude 在编程、专业工作与长程智能体任务中的产品演进和实际应用。",
+          "summaryEn": "Tracks Claude’s product progress in coding, professional work, and long-running agent tasks.",
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news",
+          "publishedAt": "2026-07-24",
+          "kind": "要闻"
         },
         {
-          "title": "Repaying the inheritance: How education and research policy can address AI's borrowed expertise - Brookings",
-          "titleEn": "Repaying the inheritance: How education and research policy can address AI's borrowed expertise - Brookings",
-          "summary": "来自 人工智能 监测网络的本周更新，请访问原文了解详情。",
-          "summaryEn": "This week’s update from the Artificial intelligence monitoring network. Open the source for full details.",
-          "source": "Google News RSS",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNVzNRMlAzcEhIRXYtNndEbHlBX1Jua1dQTlJyTVBWVnFrbWY4dkE3REVtQ1pvN0F5ZG5KdlctblNRMkZWY1JzUzlyakR2VC1BU1ZIYTlhNU4xZ01CaVlZZUNMVDVtUUdEc3F4cDI5SmQ2SG9zMFdFdkVwYzhXQjlQWVBtbTBtLWl0TzdyWi1DMTBNaGNMcVFlYVh5UnhSMXZmcjdqd1ZvZW9RZ0YtRG1VYmF6OHQyQ3UwS2l1ZTJoSXpEclNSSnBxUQ?oc=5",
-          "publishedAt": "2026-07-20",
-          "kind": "新闻"
+          "title": "Google：Gemini 模型、智能体与创作工具更新",
+          "titleEn": "Google: Gemini models, agents, and creative-tool updates",
+          "summary": "关注模型、机器人、搜索任务代理、视频与音乐创作等应用工具的新方向。",
+          "summaryEn": "Covers model, robotics, search-agent, video, and music-creation tool directions.",
+          "source": "Google",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/",
+          "publishedAt": "2026-08-04",
+          "kind": "要闻"
         }
       ]
     },

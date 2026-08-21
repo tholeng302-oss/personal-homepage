@@ -110,15 +110,24 @@ class WeeklyIntelligenceTest(unittest.TestCase):
         self.assertIn('href="#framework-energy"', html)
         self.assertIn('href="#framework-capital"', html)
         self.assertIn('href="#framework-scenery"', html)
-        self.assertIn('href="#framework-memory"', html)
+        self.assertIn('href="#framework-ai"', html)
         self.assertIn('function renderFrameworkOverview', script)
         self.assertIn('id="framework-energy"', script)
         self.assertIn('id="framework-capital"', script)
         self.assertIn('id="framework-scenery"', script)
-        self.assertIn('id="framework-memory"', script)
+        self.assertIn('id="framework-ai"', script)
         self.assertIn('href="intelligence.html"', script)
         self.assertIn('href="memories.html"', script)
-        self.assertIn('href="family.html"', script)
+
+    def test_ai_overview_tracks_major_companies_and_application_tools(self):
+        data = json.loads(Path("data/weekly-intelligence.json").read_text())
+        script = Path("script.js").read_text()
+        ai_topic = next(topic for topic in data["topics"] if topic["id"] == "ai")
+        source_names = {source["name"] for source in ai_topic["sources"]}
+
+        self.assertTrue({"OpenAI Newsroom", "Anthropic Newsroom", "Google AI"}.issubset(source_names))
+        self.assertIn('h2>${isChinese ? "人工智能动向" : "AI trends"}</h2>', script)
+        self.assertIn('getOverviewTopicItems(data, ["ai"])', script)
 
     def test_capital_overview_has_separate_equities_carbon_and_commodities_blocks(self):
         script = Path("script.js").read_text()
@@ -140,7 +149,7 @@ class WeeklyIntelligenceTest(unittest.TestCase):
     def test_framework_uses_a_new_script_version_for_the_capital_list_layout(self):
         html = Path("framework.html").read_text()
 
-        self.assertIn('script.js?v=capital-news-columns-v3', html)
+        self.assertIn('script.js?v=capital-news-columns-v4', html)
 
     def test_scenery_overview_uses_one_photo_group_label_and_detail_tags(self):
         script = Path("script.js").read_text()
