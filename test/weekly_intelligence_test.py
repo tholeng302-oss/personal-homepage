@@ -137,6 +137,11 @@ class WeeklyIntelligenceTest(unittest.TestCase):
         self.assertIn("renderCapitalItems(market.items, locale, emptyMessage)", script)
         self.assertNotIn("renderItems(market.items)", script)
 
+    def test_framework_uses_a_new_script_version_for_the_capital_list_layout(self):
+        html = Path("framework.html").read_text()
+
+        self.assertIn('script.js?v=capital-news-columns-v2', html)
+
     def test_special_focus_signal_copy_only_names_ai_and_cultural_landscapes(self):
         script = Path("script.js").read_text()
 
