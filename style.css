@@ -1430,8 +1430,9 @@ html[lang="zh-CN"] #contact-title {
 .framework-capital-market:last-child { border-right:0; }
 .framework-capital-market > .focus-topic-label { margin:0 0 10px; }
 .framework-capital-market > .focus-topic-label { padding:18px 18px 0; }
-.framework-capital-market .framework-overview-news-grid { grid-template-columns:1fr; }
-.framework-capital-market .framework-overview-news { border-right:0; }
+.framework-capital-news-list { display:grid; }
+.framework-capital-news-list > .tag { justify-self:start; margin:0 18px 4px; }
+.framework-capital-news-list .focus-item { min-height:0; padding:18px; border-right:0; }
 .framework-overview-news { padding:18px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
 .framework-overview-news:last-child { border-right:0; }
 .framework-overview-news .focus-topic-label { margin-bottom:12px; }

@@ -688,14 +688,15 @@ function formatUpdateDate(value, locale) {
   }).format(date);
 }
 
-function renderNewsItem(item, locale, headingTag = "h4") {
+function renderNewsItem(item, locale, headingTag = "h4", options = {}) {
   const labels = intelligenceFilterLabels[locale];
   const title = locale === "zh" ? item.title : item.titleEn;
   const summary = locale === "zh" ? item.summary : item.summaryEn;
+  const kindLabel = options.showKind === false ? "" : `<span class="tag">${escapeHtml(item.kind)}</span>`;
 
   return `
     <article class="focus-item">
-      <span class="tag">${escapeHtml(item.kind)}</span>
+      ${kindLabel}
       <${headingTag}>${escapeHtml(title)}</${headingTag}>
       <p>${escapeHtml(summary)}</p>
       <div class="focus-item-footer">
@@ -703,6 +704,20 @@ function renderNewsItem(item, locale, headingTag = "h4") {
         <a class="focus-source-link" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${labels.sourceLink} <span aria-hidden="true">↗</span></a>
       </div>
     </article>
+  `;
+}
+
+function renderCapitalItems(items, locale, emptyMessage) {
+  if (!items.length) {
+    return `<p class="framework-overview-empty">${emptyMessage}</p>`;
+  }
+
+  const kind = items[0].item.kind;
+  return `
+    <div class="framework-capital-news-list">
+      <span class="tag">${escapeHtml(kind)}</span>
+      ${items.map(({ item }) => renderNewsItem(item, locale, "h3", { showKind: false })).join("")}
+    </div>
   `;
 }
 
@@ -765,7 +780,7 @@ function renderFrameworkOverview(data, locale) {
       <div class="framework-capital-market-grid">${capitalMarkets.map((market) => `
         <section class="framework-capital-market" id="${market.id}">
           <p class="focus-topic-label">${market.title}</p>
-          <div class="framework-overview-news-grid">${renderItems(market.items)}</div>
+          ${renderCapitalItems(market.items, locale, emptyMessage)}
         </section>
       `).join("")}</div>
     </section>

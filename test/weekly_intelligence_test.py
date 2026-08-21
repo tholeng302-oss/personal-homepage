@@ -130,6 +130,13 @@ class WeeklyIntelligenceTest(unittest.TestCase):
         self.assertIn('getOverviewTopicItems(data, ["carbon"])', script)
         self.assertIn('getOverviewTopicItems(data, ["commodities"])', script)
 
+    def test_capital_market_renders_one_heading_and_one_kind_label_per_column(self):
+        script = Path("script.js").read_text()
+
+        self.assertIn("function renderCapitalItems", script)
+        self.assertIn("renderCapitalItems(market.items, locale, emptyMessage)", script)
+        self.assertNotIn("renderItems(market.items)", script)
+
     def test_special_focus_signal_copy_only_names_ai_and_cultural_landscapes(self):
         script = Path("script.js").read_text()
 
