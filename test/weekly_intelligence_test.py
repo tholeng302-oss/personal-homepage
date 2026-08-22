@@ -4,6 +4,12 @@ import unittest
 
 
 class WeeklyIntelligenceTest(unittest.TestCase):
+    def test_homepage_energy_and_capital_entry_uses_the_short_title(self):
+        html = Path("index.html").read_text()
+
+        self.assertIn("<h2>能源与资本信息</h2>", html)
+        self.assertNotIn("<h2>今日能源与资本信息</h2>", html)
+
     def test_each_topic_has_at_most_three_entries_and_sources(self):
         data = json.loads(Path("data/weekly-intelligence.json").read_text())
 
