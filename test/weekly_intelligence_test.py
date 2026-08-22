@@ -23,7 +23,14 @@ class WeeklyIntelligenceTest(unittest.TestCase):
 
         self.assertNotIn('class="calendar-card"', gallery_renderer)
         self.assertIn('class="fragment-list"', gallery_renderer)
-        self.assertIn('script.js?v=time-fragments-no-calendar-v1', html)
+        self.assertIn('script.js?v=time-fragments-no-calendar-v2', html)
+
+    def test_fengxian_tea_chant_does_not_repeat_its_detail_text(self):
+        script = Path("script.js").read_text()
+        fengxian_entry = script.split('id: "fengxian-tea-chant"', 1)[1].split("}", 1)[0]
+
+        self.assertNotIn("fragment:", fengxian_entry)
+        self.assertIn('photo.fragment ? `<p>${photo.fragment}</p>` : ""', script)
 
     def test_each_topic_has_at_most_three_entries_and_sources(self):
         data = json.loads(Path("data/weekly-intelligence.json").read_text())

@@ -181,9 +181,7 @@ const siteContent = {
           mapXWorld: 77,
           mapYWorld: 48,
           sourceLabel: "公开相册",
-          sourceUrl: "#photo-fengxian-tea-chant",
-          fragment:
-            "上海奉贤的一片农田之中，小河边上一座两层环形圈屋，中央敞向天际的是一汪圆形鱼池，锦鲤在水中游弋……"
+          sourceUrl: "#photo-fengxian-tea-chant"
         }
       ]
     },
@@ -1027,7 +1025,7 @@ function renderPublicGallery(content) {
                     <div class="fragment-entry-body">
                       <p class="photo-location">${photo.location}</p>
                       <p>${photo.description}</p>
-                      <p>${photo.fragment}</p>
+                      ${photo.fragment ? `<p>${photo.fragment}</p>` : ""}
                       <a class="fragment-link" href="${photo.sourceUrl}" target="_blank" rel="noreferrer">${photo.sourceLabel}</a>
                     </div>
                   </details>
