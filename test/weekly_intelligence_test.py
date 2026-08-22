@@ -16,6 +16,15 @@ class WeeklyIntelligenceTest(unittest.TestCase):
 
         self.assertIn(".workspace-entries { display:grid; grid-template-columns:repeat(3,minmax(0,1fr));", stylesheet)
 
+    def test_time_box_time_fragments_do_not_render_the_monthly_calendar(self):
+        script = Path("script.js").read_text()
+        html = Path("memories.html").read_text()
+        gallery_renderer = script.split("function renderPublicGallery", 1)[1].split("function renderPrivateVault", 1)[0]
+
+        self.assertNotIn('class="calendar-card"', gallery_renderer)
+        self.assertIn('class="fragment-list"', gallery_renderer)
+        self.assertIn('script.js?v=time-fragments-no-calendar-v1', html)
+
     def test_each_topic_has_at_most_three_entries_and_sources(self):
         data = json.loads(Path("data/weekly-intelligence.json").read_text())
 

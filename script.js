@@ -1041,23 +1041,6 @@ function renderPublicGallery(content) {
     )
     .join("");
 
-  const weekdayMarkup = content.publicMemory.calendarWeekdays
-    .map((weekday) => `<span class="calendar-weekday">${weekday}</span>`)
-    .join("");
-
-  const calendarCells = Array.from({ length: 35 }, (_, index) => {
-    if (index === 27) {
-      return `
-        <button class="calendar-day calendar-day-active" type="button">
-          <span class="calendar-day-number">27</span>
-          <span class="calendar-day-label">${groupedPhotos[0]?.entryLabel || ""}</span>
-        </button>
-      `;
-    }
-
-    return `<span class="calendar-day calendar-day-empty"></span>`;
-  }).join("");
-
   container.innerHTML = `
     <article class="gallery-card gallery-card-feature">
       <h3>${content.publicMemory.items[0].title}</h3>
@@ -1069,15 +1052,6 @@ function renderPublicGallery(content) {
     <article class="gallery-card gallery-card-feature">
       <h3>${content.publicMemory.items[1].title}</h3>
       <p>${content.publicMemory.items[1].text}</p>
-      <div class="calendar-card">
-        <div class="calendar-card-topline">
-          <p class="memory-label">${content.publicMemory.calendarTitle}</p>
-        </div>
-        <div class="calendar-grid">
-          ${weekdayMarkup}
-          ${calendarCells}
-        </div>
-      </div>
       <div class="fragment-list">
         ${fragmentsMarkup}
       </div>
