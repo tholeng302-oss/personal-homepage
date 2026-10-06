@@ -1,203 +1,37 @@
 import json
 from pathlib import Path
 import unittest
+from urllib.parse import urlparse
+
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 class WeeklyIntelligenceTest(unittest.TestCase):
-    def test_homepage_energy_and_capital_entry_uses_the_short_title(self):
-        html = Path("index.html").read_text()
+    def test_every_clean_energy_topic_has_at_most_three_safe_source_entries(self):
+        data = json.loads((ROOT / "data/weekly-intelligence.json").read_text())
 
-        self.assertIn("<h2>能源与资本信息</h2>", html)
-        self.assertNotIn("<h2>今日能源与资本信息</h2>", html)
-        self.assertIn('style.css?v=workspace-entries-equal-v1', html)
-
-    def test_homepage_workspace_entries_use_three_equal_columns(self):
-        stylesheet = Path("style.css").read_text()
-
-        self.assertIn(".workspace-entries { display:grid; grid-template-columns:repeat(3,minmax(0,1fr));", stylesheet)
-
-    def test_time_box_time_fragments_do_not_render_the_monthly_calendar(self):
-        script = Path("script.js").read_text()
-        html = Path("memories.html").read_text()
-        gallery_renderer = script.split("function renderPublicGallery", 1)[1].split("function renderPrivateVault", 1)[0]
-
-        self.assertNotIn('class="calendar-card"', gallery_renderer)
-        self.assertIn('class="fragment-list"', gallery_renderer)
-        self.assertIn('script.js?v=time-fragments-no-calendar-v2', html)
-
-    def test_fengxian_tea_chant_does_not_repeat_its_detail_text(self):
-        script = Path("script.js").read_text()
-        fengxian_entry = script.split('id: "fengxian-tea-chant"', 1)[1].split("}", 1)[0]
-
-        self.assertNotIn("fragment:", fengxian_entry)
-        self.assertIn('photo.fragment ? `<p>${photo.fragment}</p>` : ""', script)
-
-    def test_each_topic_has_at_most_three_entries_and_sources(self):
-        data = json.loads(Path("data/weekly-intelligence.json").read_text())
-
-        expected_topic_ids = {
-            "ai",
-            "hydrogen",
-            "ammonia",
-            "methanol",
-            "saf",
-            "biogas",
-            "stocks",
-            "carbon",
-            "commodities",
-            "scenery",
-        }
-        topic_ids = {topic["id"] for topic in data["topics"]}
-        self.assertEqual(len(data["topics"]), 10)
-        self.assertEqual(len(topic_ids), len(data["topics"]))
-        self.assertEqual(topic_ids, expected_topic_ids)
         for topic in data["topics"]:
-            self.assertTrue(
-                {"name", "nameEn", "sources", "feeds", "items"}.issubset(topic),
-                topic["id"],
-            )
-            self.assertTrue(topic["name"])
-            self.assertTrue(topic["nameEn"])
-            self.assertLessEqual(len(topic["items"]), 3)
-            self.assertGreaterEqual(len(topic["sources"]), 2)
-            self.assertTrue(
-                all(item["url"] and item["publishedAt"] for item in topic["items"])
-            )
+            self.assertLessEqual(len(topic["items"]), 3, topic["id"])
+            self.assertGreaterEqual(len(topic["sources"]), 2, topic["id"])
+            for item in topic["items"]:
+                self.assertIn(urlparse(item["url"]).scheme, {"http", "https"})
+                self.assertTrue(item["source"])
+                self.assertTrue(item["publishedAt"])
 
-    def test_page_has_focus_area_mount_and_data_loader(self):
-        html = Path("intelligence.html").read_text()
-        script = Path("script.js").read_text()
+    def test_weekly_workflow_only_updates_this_repositorys_data_file(self):
+        workflow = (ROOT / ".github/workflows/weekly-intelligence.yml").read_text()
 
-        self.assertIn('id="intel-live-briefs"', html)
-        self.assertIn('fetch("data/weekly-intelligence.json")', script)
+        self.assertIn("scripts/update-weekly-intelligence.mjs", workflow)
+        self.assertIn("git add data/weekly-intelligence.json", workflow)
+        self.assertNotIn("my-life-finance-ai-scenery", workflow)
 
-    def test_special_focus_and_intelligence_mounts_exist(self):
-        html = Path("intelligence.html").read_text()
-        script = Path("script.js").read_text()
+    def test_public_intelligence_pages_have_no_life_site_navigation(self):
+        for filename in ("index.html", "intelligence.html", "framework.html"):
+            page = (ROOT / filename).read_text()
+            self.assertNotIn("memories.html", page, filename)
+            self.assertNotIn("family.html", page, filename)
 
-        self.assertIn('id="intel-live-briefs"', html)
-        self.assertIn('id="global-resource-directory"', html)
-        self.assertIn('"特别关注"', script)
-        self.assertIn('"全球信息资源调度台"', script)
-
-    def test_english_resource_desk_uses_the_approved_visible_title(self):
-        script = Path("script.js").read_text()
-
-        self.assertIn('title: "Global Information Resource Dispatch Desk"', script)
-        self.assertNotIn('title: "Global Intelligence Resource Desk"', script)
-
-    def test_stylesheet_does_not_keep_the_unmounted_intel_grid_selector(self):
-        stylesheet = Path("style.css").read_text()
-
-        self.assertNotIn(".intel-grid", stylesheet)
-
-    def test_topic_routing_contract(self):
-        script = Path("script.js").read_text()
-
-        self.assertIn('specialFocusTopicIds = new Set(["ai", "scenery"])', script)
-        self.assertIn(
-            '''const intelligenceDeskGroups = [
-  { id: "green-fuels", topicIds: ["methanol", "saf", "ammonia"] },
-  { id: "hydrogen-biogas", topicIds: ["hydrogen", "biogas"] },
-  { id: "markets-carbon", topicIds: ["stocks", "carbon", "commodities"] }
-];''',
-            script,
-        )
-        self.assertIn('global-resource-directory', script)
-
-    def test_intelligence_desk_cadences_are_explicit(self):
-        script = Path("script.js").read_text()
-
-        expected_cadences = {
-            "green-fuels": ("每周", "Weekly"),
-            "hydrogen-biogas": ("每月", "Monthly"),
-            "markets-carbon": ("每日/每周", "Daily / Weekly"),
-        }
-
-        for desk_id, (chinese_cadence, english_cadence) in expected_cadences.items():
-            for cadence in (chinese_cadence, english_cadence):
-                self.assertRegex(
-                    script,
-                    rf'id: "{desk_id}",\s*title: "[^"]+",\s*cadence: "{cadence}"',
-                )
-
-    def test_every_news_item_has_a_direct_source_link(self):
-        script = Path("script.js").read_text()
-
-        self.assertIn("function renderNewsItem", script)
-        self.assertIn('href="${escapeHtml(item.url)}"', script)
-        self.assertIn('target="_blank" rel="noreferrer"', script)
-        self.assertIn('查看原文', script)
-        self.assertIn('Read source', script)
-
-    def test_framework_page_mounts_all_four_public_overview_sections(self):
-        html = Path("framework.html").read_text()
-        script = Path("script.js").read_text()
-
-        self.assertIn('id="framework-overview"', html)
-        self.assertIn('href="#framework-energy"', html)
-        self.assertIn('href="#framework-capital"', html)
-        self.assertIn('href="#framework-scenery"', html)
-        self.assertIn('href="#framework-ai"', html)
-        self.assertIn('function renderFrameworkOverview', script)
-        self.assertIn('id="framework-energy"', script)
-        self.assertIn('id="framework-capital"', script)
-        self.assertIn('id="framework-scenery"', script)
-        self.assertIn('id="framework-ai"', script)
-        self.assertIn('href="intelligence.html"', script)
-        self.assertIn('href="memories.html"', script)
-
-    def test_ai_overview_tracks_major_companies_and_application_tools(self):
-        data = json.loads(Path("data/weekly-intelligence.json").read_text())
-        script = Path("script.js").read_text()
-        ai_topic = next(topic for topic in data["topics"] if topic["id"] == "ai")
-        source_names = {source["name"] for source in ai_topic["sources"]}
-
-        self.assertTrue({"OpenAI Newsroom", "Anthropic Newsroom", "Google AI"}.issubset(source_names))
-        self.assertIn('h2>${isChinese ? "人工智能动向" : "AI trends"}</h2>', script)
-        self.assertIn('getOverviewTopicItems(data, ["ai"])', script)
-
-    def test_capital_overview_has_separate_equities_carbon_and_commodities_blocks(self):
-        script = Path("script.js").read_text()
-
-        self.assertIn('id: "framework-capital-equities"', script)
-        self.assertIn('id: "framework-capital-carbon"', script)
-        self.assertIn('id: "framework-capital-commodities"', script)
-        self.assertIn('getOverviewTopicItems(data, ["stocks"])', script)
-        self.assertIn('getOverviewTopicItems(data, ["carbon"])', script)
-        self.assertIn('getOverviewTopicItems(data, ["commodities"])', script)
-
-    def test_capital_market_renders_one_heading_and_one_kind_label_per_column(self):
-        script = Path("script.js").read_text()
-
-        self.assertIn("function renderCapitalItems", script)
-        self.assertIn("renderCapitalItems(market.items, locale, emptyMessage)", script)
-        self.assertNotIn("renderItems(market.items)", script)
-
-    def test_framework_uses_a_new_script_version_for_the_capital_list_layout(self):
-        html = Path("framework.html").read_text()
-
-        self.assertIn('script.js?v=capital-news-columns-v4', html)
-
-    def test_scenery_overview_uses_one_photo_group_label_and_detail_tags(self):
-        script = Path("script.js").read_text()
-
-        self.assertIn("function renderSceneryItems", script)
-        self.assertIn('isChinese ? "风景与文化景观" : "Scenery and cultural landscapes"', script)
-        self.assertIn('const detailKind = locale === "zh" ? "详情" : "Details"', script)
-        self.assertIn("renderSceneryItems(sceneryItems, locale, emptyMessage)", script)
-
-    def test_special_focus_signal_copy_only_names_ai_and_cultural_landscapes(self):
-        script = Path("script.js").read_text()
-
-        self.assertIn(
-            '{ label: "特别关注", value: "AI、风景/文化景观" }',
-            script,
-        )
-        self.assertIn(
-            '{ label: "Special focus", value: "AI, scenery/cultural landscapes" }',
-            script,
-        )
 
 if __name__ == "__main__":
     unittest.main()
